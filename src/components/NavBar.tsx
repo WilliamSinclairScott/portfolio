@@ -1,6 +1,8 @@
-import React from "react";
 import { Flex, Strong, TabNav, Text } from "@radix-ui/themes";
-const NavBar = () => {
+import React from "react";
+
+
+const NavBar: React.FC = () => {
   return (
     <TabNav.Root>
       <TabNav.Link href="/">
@@ -14,6 +16,6 @@ const NavBar = () => {
       </Flex>
     </TabNav.Root>
     );
-};
+}
 
 export default NavBar;

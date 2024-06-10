@@ -1,9 +1,11 @@
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 
-import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+
+import NavBar from "./components/NavBar";
+
 import { Flex } from "@radix-ui/themes";
 
 const NavbarWrapper = () => (
