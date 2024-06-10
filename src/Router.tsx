@@ -3,6 +3,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact"
+import { Flex } from "@radix-ui/themes";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,9 @@ const router = createBrowserRouter([
 
 const Router: React.FC = () => {
   return (
-    <RouterProvider router={router}/>
+    <Flex direction='column' align='stretch' justify='center'>
+      <RouterProvider router={router}/>
+    </Flex>
   )
 }
 export default Router;
