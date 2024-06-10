@@ -1,75 +1,78 @@
-import { Flex, Text, Strong, RadioGroup, Separator } from "@radix-ui/themes";
+import {
+  Flex,
+  Text,
+  Strong,
+  RadioGroup,
+  Separator,
+  Card,
+  Button,
+  Link,
+} from "@radix-ui/themes";
 import React from "react";
 const Home: React.FC = () => {
-  const [selected, setSelected] = React.useState("1");
-  const handelRadioChange = (e: string) => {
-    console.log(typeof e);
-    if (e) {
-      setSelected(e);
-    }
-  };
   return (
-    <>
-      <Flex direction="column" align="center">
-        <Strong>William Scott</Strong> <br />
-        <Text>Software Engineer </Text> <br />
-        <Text>What I've Worked on</Text>
-        <RadioGroup.Root
-          defaultValue="1"
-          name="example"
-          onClick={(radioGroup) =>
-            handelRadioChange((radioGroup.target as HTMLInputElement)?.value)
-          }
-        >
-          <RadioGroup.Item value="1">Brooklyn Strategist</RadioGroup.Item>
-          <RadioGroup.Item value="2">Divvy</RadioGroup.Item>
-          <RadioGroup.Item value="3">NextMoveCafe</RadioGroup.Item>
-          <RadioGroup.Item value="4">Chrysalis</RadioGroup.Item>
-        </RadioGroup.Root>
-        <Separator my="1" size="4" />
-      {selected === "1" ? (
-        <>
+    <Flex
+      direction="column"
+      justify='center'
+      align="center"
+      gap='4'
+      style={{ maxWidth: "800px", margin: "auto"}}
+    >
+      <Text>Welcome to my portfolio website!</Text>
+      <Card>
+        <Flex direction="column" align="center">
           <Text>
             The first project I worked on was a website for a local business. I
             used HTML, CSS, and PHP in WordPress to refactor the site and make
-            it more user-friendly. You can see it here!
+            it more user-friendly.
           </Text>
-          <Separator my="1" size="3" />
-          <a href="https://thebrooklynstrategist.com">
+          <Button variant='outline'>
+            <Link href="https://thebrooklynstrategist.com/">
               The Brooklyn Strategist
-            </a>
-        </>
-      ) : selected === "2" ? (
-        <>
+            </Link>
+          </Button>
+        </Flex>
+      </Card>
+      <Card>
+        <Flex direction="column" align="center">
           <Text>
-            I also collaborated with a team of developers on a project called
+            I've also collaborated with a team of developers on a project called
             Divvy. It is a full-stack MERN application designed to help friends
-            split expenses after a night out. Check out the repository!
+            split expenses after a night out.
           </Text>
-          <Separator my="1" size="3" />
-          <a href="https://github.com/WilliamSinclairScott/Frontend-Dutch-by-Wahgee">Divvy Repository</a>
-        </>
-      ) : selected === "3" ? (
-        <>
+          <Button variant='outline'>
+            <Link href="https://github.com/WilliamSinclairScott/Frontend-Dutch-by-Wahgee">
+              Divvy Repository
+            </Link>
+          </Button>
+        </Flex>
+      </Card>
+      <Card>
+        <Flex direction="column" align="center">
           <Text>
-            I consulted with a local business to develop a website for their new afterschool program and assist with their website layout. You can visit below.
+            I consulted with a local business to develop a website for their new
+            afterschool program and assist with their website layout.
           </Text>
-          <Separator my="1" size="3" />
-          <a href="https://nextmovecafe.com">Next Move Cafe</a>
-        </>
-      ) : (
-        <>
+          <Button variant='outline'>
+            <Link href="https://nextmovecafe.com/">Next Move Cafe</Link>
+          </Button>
+        </Flex>
+      </Card>
+      <Card>
+        <Flex direction="column" align="center">
           <Text>
             I led the development of a TypeScript + Django project called
-            Chrysalis while attending General Assembly. It is a full-stack application designed to help
-            freelancers manage their projects and clients.
+            Chrysalis while attending General Assembly. It is a full-stack
+            application designed to help freelancers manage their projects.
           </Text>
-          <Separator my="1" size="3" />
-          <a href="https://github.com/Chrysalis-ServiceDistribution">Chrysalis Repository</a>
-        </>
-      )}
-      </Flex>
-    </>
+          <Button variant='outline'>
+            <Link href="https://github.com/Chrysalis-ServiceDistribution">
+              Chrysalis Repository
+            </Link>
+          </Button>
+        </Flex>
+      </Card>
+    </Flex>
   );
 };
 
