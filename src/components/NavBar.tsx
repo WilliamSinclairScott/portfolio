@@ -10,9 +10,9 @@ const NavBar: React.FC = () => {
       </TabNav.Link>
       <TabNav.Link href="/about">About</TabNav.Link>
       <TabNav.Link href="/contact">Contact</TabNav.Link>
-      <Flex direction='row-reverse' align='center' justify='center' 
+      <Flex align='center' justify='center' 
       >
-        <Text><Strong>William Scott</Strong>, software engineer </Text>
+        <Text><Strong>William Scott</Strong>, software engineer/website developer </Text>
       </Flex>
     </TabNav.Root>
     );

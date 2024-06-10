@@ -9,7 +9,7 @@ import NavBar from "./components/NavBar";
 import { Flex } from "@radix-ui/themes";
 
 const NavbarWrapper = () => (
-  <Flex direction="column" justify="center" gap="4">
+  <Flex direction="column" justify="center" align='center' gap="4">
     <NavBar />
     <Outlet />
   </Flex>

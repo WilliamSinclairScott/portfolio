@@ -15,9 +15,8 @@ const Home: React.FC = () => {
       gap='4'
       style={{ maxWidth: "800px", margin: "auto"}}
     >
-      <Text>Welcome to my portfolio website!</Text>
       <Card>
-        <Flex direction="column" align="center">
+        <Flex direction="column" align="center" gap='1'>
           <Text>
             The first project I worked on was a website for a local business. I
             used HTML, CSS, and PHP in WordPress to refactor the site and make
@@ -31,7 +30,7 @@ const Home: React.FC = () => {
         </Flex>
       </Card>
       <Card>
-        <Flex direction="column" align="center">
+        <Flex direction="column" align="center" gap='1'>
           <Text>
             I've also collaborated with a team of developers on a project called
             Divvy. It is a full-stack MERN application designed to help friends
@@ -45,7 +44,7 @@ const Home: React.FC = () => {
         </Flex>
       </Card>
       <Card>
-        <Flex direction="column" align="center">
+        <Flex direction="column" align="center" gap='1'>
           <Text>
             I consulted with a local business to develop a website for their new
             afterschool program and assist with their website layout.
@@ -56,7 +55,7 @@ const Home: React.FC = () => {
         </Flex>
       </Card>
       <Card>
-        <Flex direction="column" align="center">
+        <Flex direction="column" align="center" gap='1'>
           <Text>
             I led the development of a TypeScript + Django project called
             Chrysalis while attending General Assembly. It is a full-stack
