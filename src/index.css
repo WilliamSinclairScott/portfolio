@@ -1,16 +1,21 @@
-body {
-  font-family: 'Noto Sans Display', sans-serif;
+html, body {
+  height: 100%;
   margin: 0;
+  font-family: 'Noto Sans Display', sans-serif;
 }
 
 .background {
-  background: linear-gradient(180deg, #544e5d, #0c1630);
+  /* background: linear-gradient(180deg, #544e5d, #0c1630); */
+  height: 100%;
 }
 
 body main {
   max-width: 512px;
   margin: 0 auto;
   padding: 8px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .radix-themes {

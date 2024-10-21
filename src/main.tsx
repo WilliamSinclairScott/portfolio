@@ -1,21 +1,20 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import Router from './Router.tsx'
+import React from "react";
+import App from "./App";
+import ReactDOM from "react-dom/client";
 
-import { Theme } from '@radix-ui/themes'
-import './index.css'
-import '@radix-ui/themes/styles.css';
+import { Theme } from "@radix-ui/themes";
+import "./index.css";
+import "@radix-ui/themes/styles.css";
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <Theme
-    appearance='dark'
-    accentColor='mint'
-    grayColor='sage'
-    panelBackground='translucent'
-    className='background'
+      appearance="dark"
+      accentColor='violet'
+      grayColor="sage"
+      // panelBackground="translucent"
     >
-      <Router />
-    </Theme> 
-  </React.StrictMode>,
-)
+      <App />
+    </Theme>
+  </React.StrictMode>
+);
