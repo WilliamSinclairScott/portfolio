@@ -1,15 +1,13 @@
 import { useEffect, useRef } from "react";
 import "./War.css";
-import svgPath from "/war.svg";
 
 interface Pixel {
   x: number;
   y: number;
+  color: string;
   dx: number;
   dy: number;
   size: number;
-  color: string; // Used if you're applying dynamic color to the SVG/Image
-  image: HTMLImageElement | null; // Add image property
 }
 
 class PixelBattle {
@@ -29,28 +27,15 @@ class PixelBattle {
   gameOver = false;
   globalAlpha = 0.05;
   centerRadius = 600;
-  svgPath = svgPath;
-  imageLoaded = false; // Track if the image is loaded
-  svgImage: HTMLImageElement = new Image(); // The loaded SVG
 
   constructor(canvas: HTMLCanvasElement) {
     this.canvas = canvas;
     this.ctx = canvas.getContext("2d");
     this.center = { x: canvas.width / 2, y: canvas.height / 4 };
-
-    this.preloadSVG();
   }
 
-  preloadSVG() {
-    this.svgImage.src = this.svgPath;
-    this.svgImage.onload = () => {
-      this.imageLoaded = true; // Mark the image as loaded
-      this.addPixels(this.svgImage); // Start adding pixels only after SVG is loaded
-    };
-  }
-
-  addPixels(image: HTMLImageElement) {
-    if (this.gameOver || !this.imageLoaded) return;
+  addPixels() {
+    if (this.gameOver) return;
 
     this.colors.forEach((color, index) => {
       if (this.timers[index] % 100 === 0) {
@@ -63,7 +48,7 @@ class PixelBattle {
           const dy = Math.random() * 2 - 1;
           const { x, y } = this.getRandomEdgePosition();
           this.pixels.push(
-            this.createPixel(x, y, dx, dy, this.initialPixelSize, color, image)
+            this.createPixel(x, y, color, dx, dy, this.initialPixelSize)
           );
           this.colorCount[index]++;
         }
@@ -77,13 +62,12 @@ class PixelBattle {
   createPixel(
     x: number,
     y: number,
+    color: string,
     dx: number,
     dy: number,
-    size: number,
-    color: string,
-    image: HTMLImageElement
+    size: number
   ): Pixel {
-    return { x, y, dx, dy, size, color, image };
+    return { x, y, color, dx, dy, size };
   }
 
   getRandomEdgePosition() {
@@ -117,28 +101,20 @@ class PixelBattle {
   }
 
   drawPixels() {
-    if (!this.ctx || this.gameOver || !this.imageLoaded) return;
+    if (!this.ctx) return;
+    if (this.gameOver) return;
 
     this.ctx.fillStyle = "black";
     this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
 
     this.pixels.forEach((pixel, pixelIndex) => {
       this.applyCenterForce(pixel);
-
       if (pixel.size > this.maxSize - 5) {
         this.seekNearestPixel(pixel, pixelIndex);
       }
 
-      if (pixel.image) {
-        // Draw the image as the "pixel" on the canvas
-        this.ctx!.drawImage(
-          pixel.image,
-          pixel.x,
-          pixel.y,
-          pixel.size * 10, // Scale the image based on pixel size
-          pixel.size * 10
-        );
-      }
+      this.ctx!.fillStyle = pixel.color;
+      this.ctx!.fillRect(pixel.x, pixel.y, pixel.size, pixel.size);
 
       pixel.x += pixel.dx;
       pixel.y += pixel.dy;
@@ -162,6 +138,7 @@ class PixelBattle {
       ) {
         const otherPixel = this.pixels[otherIndex];
 
+        // Skip collision check if either pixel is too small (25% or less of max size)
         if (
           pixel.size <= this.maxSize * 0.25 ||
           otherPixel.size <= this.maxSize * 0.25
@@ -178,41 +155,96 @@ class PixelBattle {
             this.pixels.splice(otherIndex, 1);
             this.colorCount[this.colors.indexOf(otherPixel.color)]--;
 
+            // Pixel loses size based on half of the smaller pixel size (rounded up)
             const sizeLoss = Math.ceil(otherPixel.size / 2);
-            pixel.size = Math.max(pixel.size - sizeLoss, 1);
+            pixel.size = Math.max(pixel.size - sizeLoss, 1); // Ensure pixel doesn't become smaller than 1
           } else {
             this.createExplosion(pixel.size, pixel.x, pixel.y);
             this.pixels.splice(pixelIndex, 1);
             this.colorCount[this.colors.indexOf(pixel.color)]--;
 
+            // Other pixel loses size based on half of the smaller pixel size (rounded up)
             const sizeLoss = Math.ceil(pixel.size / 2);
-            otherPixel.size = Math.max(otherPixel.size - sizeLoss, 1);
+            otherPixel.size = Math.max(otherPixel.size - sizeLoss, 1); // Ensure pixel doesn't become smaller than 1
           }
           break;
         }
       }
     });
 
-    this.addPixels(null);
+    this.addPixels();
     this.drawScoreboard();
     requestAnimationFrame(() => this.drawPixels());
   }
-  
+
+  applyCenterForce(pixel: Pixel) {
+    // Randomize a point within the center radius
+    const angle = Math.random() * 2 * Math.PI; // Random angle
+    const distanceFromCenter = Math.random() * this.centerRadius; // Random distance within the radius
+
+    const targetX = this.center.x + distanceFromCenter * Math.cos(angle);
+    const targetY = this.center.y + distanceFromCenter * Math.sin(angle);
+
+    const dirX = targetX - pixel.x;
+    const dirY = targetY - pixel.y;
+    const distance = Math.sqrt(dirX * dirX + dirY * dirY);
+    const normDirX = dirX / distance;
+    const normDirY = dirY / distance;
+
+    // Apply the force towards the randomly selected point in the center radius
+    pixel.dx += normDirX * this.forceStrength;
+    pixel.dy += normDirY * this.forceStrength;
+  }
+
+  moveToCenter(pixel: Pixel) {
+    // Randomize a point within the center radius
+    const angle = Math.random() * 2 * Math.PI; // Random angle
+    const distanceFromCenter = Math.random() * this.centerRadius; // Random distance within the radius
+
+    const targetX = this.center.x + distanceFromCenter * Math.cos(angle);
+    const targetY = this.center.y + distanceFromCenter * Math.sin(angle);
+
+    const dirX = targetX - pixel.x;
+    const dirY = targetY - pixel.y;
+    const distance = Math.sqrt(dirX * dirX + dirY * dirY);
+    const normDirX = dirX / distance;
+    const normDirY = dirY / distance;
+
+    // Apply the force towards the randomly selected point in the center radius
+    pixel.dx = normDirX * 2;
+    pixel.dy = normDirY * 2;
+  }
+
   seekNearestPixel(pixel: Pixel, pixelIndex: number) {
     let nearestPixel: Pixel | null = null;
     let nearestDistance = Infinity;
 
-    this.pixels
-      .filter((p) => p.size >= this.maxSize * 0.8)
-      .forEach((otherPixel, otherIndex) => {
-        if (otherIndex !== pixelIndex && otherPixel.color !== pixel.color) {
-          const distance = this.getDistance(pixel, otherPixel);
-          if (distance < nearestDistance) {
-            nearestDistance = distance;
-            nearestPixel = otherPixel;
+    if (this.maxPopulationRate > 0) {
+      this.pixels
+        .filter((pixel) => pixel.size >= this.maxSize * 0.8)
+        .forEach((otherPixel, otherIndex) => {
+          if (otherIndex !== pixelIndex && otherPixel.color !== pixel.color) {
+            const distance = this.getDistance(pixel, otherPixel);
+            if (distance < nearestDistance) {
+              nearestDistance = distance;
+              nearestPixel = otherPixel;
+            }
           }
-        }
-      });
+        });
+    } else {
+      if (this.seekStrength < 1) this.seekStrength += 0.1;
+      this.pixels
+        .filter((pixel) => pixel.size >= this.maxSize * 0.5)
+        .forEach((otherPixel, otherIndex) => {
+          if (otherIndex !== pixelIndex && otherPixel.color !== pixel.color) {
+            const distance = this.getDistance(pixel, otherPixel);
+            if (distance < nearestDistance) {
+              nearestDistance = distance;
+              nearestPixel = otherPixel;
+            }
+          }
+        });
+    }
 
     if (nearestPixel) {
       const dirX = nearestPixel.x - pixel.x;
@@ -222,41 +254,6 @@ class PixelBattle {
       pixel.dx += (dirX / distance) * this.seekStrength;
       pixel.dy += (dirY / distance) * this.seekStrength;
     }
-  }
-
-  applyCenterForce(pixel: Pixel) {
-    const angle = Math.random() * 2 * Math.PI;
-    const distanceFromCenter = Math.random() * this.centerRadius;
-
-    const targetX = this.center.x + distanceFromCenter * Math.cos(angle);
-    const targetY = this.center.y + distanceFromCenter * Math.sin(angle);
-
-    const dirX = targetX - pixel.x;
-    const dirY = targetY - pixel.y;
-    const distance = Math.sqrt(dirX * dirX + dirY * dirY);
-    const normDirX = dirX / distance;
-    const normDirY = dirY / distance;
-
-    pixel.dx += normDirX * this.forceStrength;
-    pixel.dy += normDirY * this.forceStrength;
-  }
-
-  moveToCenter(pixel: Pixel) {
-    const angle = Math.random() * 2 * Math.PI;
-    const distanceFromCenter = Math.random() * this.centerRadius;
-
-    const targetX = this.center.x + distanceFromCenter * Math.cos(angle);
-    const targetY = this.center.y + distanceFromCenter * Math.sin(angle);
-
-    const dirX = targetX - pixel.x;
-    const dirY = targetY - pixel.y;
-    const distance = Math.sqrt(dirX * dirX + dirY * dirY);
-
-    const normDirX = dirX / distance;
-    const normDirY = dirY / distance;
-
-    pixel.dx = normDirX * 2;
-    pixel.dy = normDirY * 2;
   }
 
   getDistance(p1: Pixel, p2: Pixel) {
@@ -280,6 +277,15 @@ class PixelBattle {
     this.ctx.beginPath();
     this.ctx.arc(x + size / 2, y + size / 2, size * 1.5, 0, Math.PI * 2);
     this.ctx.fill();
+  }
+
+  getColorSizes() {
+    return this.colors.map((color, index) => {
+      const totalSize = this.pixels
+        .filter((pixel) => pixel.color === color)
+        .reduce((sum, pixel) => sum + pixel.size, 0);
+      return { color, totalSize };
+    });
   }
 
   drawScoreboard() {
@@ -312,21 +318,12 @@ class PixelBattle {
       }
     });
   }
-
-  getColorSizes() {
-    return this.colors.map((color, index) => {
-      const totalSize = this.pixels
-        .filter((pixel) => pixel.color === color)
-        .reduce((sum, pixel) => sum + pixel.size, 0);
-      return { color, totalSize };
-    });
-  }
-
   static getRandomInt(min: number, max: number) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 }
 
+// Main component using the PixelBattle class
 export default function PixelBattleCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
