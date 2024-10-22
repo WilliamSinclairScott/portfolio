@@ -90,7 +90,7 @@ export default function Component() {
     <Box className="portfolio-section">
       <War />
       <Flex
-        direction={{ "@initial": "column", "@md": "row" }}
+        direction={{ "lg": "row", "md": "column", "sm": "column", "xs": "column" }}
         align="center"
         justify="center"
         gap="8"

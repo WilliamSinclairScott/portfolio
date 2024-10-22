@@ -2,8 +2,8 @@ import { useEffect, useRef } from "react";
 import "./War.css";
 
 interface Pixel {
-  x: number;
-  y: number;
+  x: number | null;
+  y: number | null;
   color: string;
   dx: number;
   dy: number;
@@ -108,6 +108,7 @@ class PixelBattle {
     this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
 
     this.pixels.forEach((pixel, pixelIndex) => {
+      if (pixel.x === null || pixel.y === null) return;
       this.applyCenterForce(pixel);
       if (pixel.size > this.maxSize - 5) {
         this.seekNearestPixel(pixel, pixelIndex);
@@ -150,7 +151,7 @@ class PixelBattle {
           pixel.color !== otherPixel.color &&
           this.checkCollision(pixel, otherPixel)
         ) {
-          if (pixel.size >= otherPixel.size) {
+          if (pixel.size >= otherPixel.size && otherPixel.x !== null && otherPixel.y !== null) {
             this.createExplosion(otherPixel.size, otherPixel.x, otherPixel.y);
             this.pixels.splice(otherIndex, 1);
             this.colorCount[this.colors.indexOf(otherPixel.color)]--;
@@ -178,6 +179,7 @@ class PixelBattle {
   }
 
   applyCenterForce(pixel: Pixel) {
+    if (pixel.x === null || pixel.y === null) return;
     // Randomize a point within the center radius
     const angle = Math.random() * 2 * Math.PI; // Random angle
     const distanceFromCenter = Math.random() * this.centerRadius; // Random distance within the radius
@@ -197,6 +199,7 @@ class PixelBattle {
   }
 
   moveToCenter(pixel: Pixel) {
+    if (pixel.x === null || pixel.y === null) return;
     // Randomize a point within the center radius
     const angle = Math.random() * 2 * Math.PI; // Random angle
     const distanceFromCenter = Math.random() * this.centerRadius; // Random distance within the radius
@@ -216,7 +219,8 @@ class PixelBattle {
   }
 
   seekNearestPixel(pixel: Pixel, pixelIndex: number) {
-    let nearestPixel: Pixel | null = null;
+    if (!pixel || pixel.x === null || pixel.y === null) return;
+    let nearestPixel: Pixel= { x: null, y: null, color: "", dx: 0, dy: 0, size: 0 };
     let nearestDistance = Infinity;
 
     if (this.maxPopulationRate > 0) {
@@ -245,24 +249,28 @@ class PixelBattle {
           }
         });
     }
-
-    if (nearestPixel) {
+    if (!nearestPixel || nearestPixel.x === null || nearestPixel.y === null) return;
       const dirX = nearestPixel.x - pixel.x;
       const dirY = nearestPixel.y - pixel.y;
       const distance = Math.sqrt(dirX * dirX + dirY * dirY);
 
       pixel.dx += (dirX / distance) * this.seekStrength;
       pixel.dy += (dirY / distance) * this.seekStrength;
-    }
   }
 
   getDistance(p1: Pixel, p2: Pixel) {
+    if (p1.x === null || p1.y === null || p2.x === null || p2.y === null) {
+      return Infinity;
+    }
     const dx = p2.x - p1.x;
     const dy = p2.y - p1.y;
     return Math.sqrt(dx * dx + dy * dy);
   }
 
   checkCollision(p1: Pixel, p2: Pixel) {
+    if (p1.x === null || p1.y === null || p2.x === null || p2.y === null) {
+      return false;
+    }
     return (
       p1.x < p2.x + p2.size &&
       p1.x + p1.size > p2.x &&
@@ -280,7 +288,7 @@ class PixelBattle {
   }
 
   getColorSizes() {
-    return this.colors.map((color, index) => {
+    return this.colors.map((color) => {
       const totalSize = this.pixels
         .filter((pixel) => pixel.color === color)
         .reduce((sum, pixel) => sum + pixel.size, 0);
@@ -308,7 +316,7 @@ class PixelBattle {
     this.ctx.font = "14px Arial";
 
     colorSizes.forEach((colorSize, index) => {
-      if (colorSize && colorSize.totalSize > 0) {
+      if (colorSize.totalSize > 0 && this.ctx) {
         this.ctx.fillStyle = colorSize.color;
         this.ctx.fillText(
           `${colorSize.color}: ${colorSize.totalSize}`,
