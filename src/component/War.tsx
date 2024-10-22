@@ -151,7 +151,11 @@ class PixelBattle {
           pixel.color !== otherPixel.color &&
           this.checkCollision(pixel, otherPixel)
         ) {
-          if (pixel.size >= otherPixel.size && otherPixel.x !== null && otherPixel.y !== null) {
+          if (
+            pixel.size >= otherPixel.size &&
+            otherPixel.x !== null &&
+            otherPixel.y !== null
+          ) {
             this.createExplosion(otherPixel.size, otherPixel.x, otherPixel.y);
             this.pixels.splice(otherIndex, 1);
             this.colorCount[this.colors.indexOf(otherPixel.color)]--;
@@ -220,7 +224,14 @@ class PixelBattle {
 
   seekNearestPixel(pixel: Pixel, pixelIndex: number) {
     if (!pixel || pixel.x === null || pixel.y === null) return;
-    let nearestPixel: Pixel= { x: null, y: null, color: "", dx: 0, dy: 0, size: 0 };
+    let nearestPixel: Pixel = {
+      x: null,
+      y: null,
+      color: "",
+      dx: 0,
+      dy: 0,
+      size: 0,
+    };
     let nearestDistance = Infinity;
 
     if (this.maxPopulationRate > 0) {
@@ -249,13 +260,14 @@ class PixelBattle {
           }
         });
     }
-    if (!nearestPixel || nearestPixel.x === null || nearestPixel.y === null) return;
-      const dirX = nearestPixel.x - pixel.x;
-      const dirY = nearestPixel.y - pixel.y;
-      const distance = Math.sqrt(dirX * dirX + dirY * dirY);
+    if (!nearestPixel || nearestPixel.x === null || nearestPixel.y === null)
+      return;
+    const dirX = nearestPixel.x - pixel.x;
+    const dirY = nearestPixel.y - pixel.y;
+    const distance = Math.sqrt(dirX * dirX + dirY * dirY);
 
-      pixel.dx += (dirX / distance) * this.seekStrength;
-      pixel.dy += (dirY / distance) * this.seekStrength;
+    pixel.dx += (dirX / distance) * this.seekStrength;
+    pixel.dy += (dirY / distance) * this.seekStrength;
   }
 
   getDistance(p1: Pixel, p2: Pixel) {
