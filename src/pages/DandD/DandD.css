@@ -1,0 +1,152 @@
+.charater-sheet {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.3fr 1.7fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "character-information"
+    "EverythingElse";
+  border: 1px solid #333;
+  background-color: #FFFFFF;
+}
+
+.character-information {
+  grid-area: character-information;
+  border: 1px solid #FF5733; /* Same as color */
+  color: #FF5733; /* Unique color */
+}
+
+.EverythingElse {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "statistics-proficiencies weapons-features-traits";
+  grid-area: EverythingElse;
+  border: 1px solid #33FF57; /* Same as color */
+  color: #33FF57; /* Unique color */
+}
+
+.statistics-proficiencies {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.8fr 1.1fr 1.1fr 1.1fr 1.1fr 0.8fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "proficiency-bonus intelligence"
+    "strength intelligence"
+    "dexterity wisdom"
+    "dexterity wisdom"
+    "constitution charisma"
+    "heroic-inspiration charisma"
+    "training-proficiencies training-proficiencies"
+    "training-proficiencies training-proficiencies";
+  grid-area: statistics-proficiencies;
+  border: 1px solid #3357FF; /* Same as color */
+  color: #3357FF; /* Unique color */
+}
+
+.training-proficiencies {
+  grid-area: training-proficiencies;
+  border: 1px solid #FF33A1; /* Same as color */
+  color: #FF33A1; /* Unique color */
+}
+
+.heroic-inspiration {
+  grid-area: heroic-inspiration;
+  border: 1px solid #A133FF; /* Same as color */
+  color: #A133FF; /* Unique color */
+}
+
+.constitution {
+  grid-area: constitution;
+  border: 1px solid #33FFA1; /* Same as color */
+  color: #33FFA1; /* Unique color */
+}
+
+.charisma {
+  grid-area: charisma;
+  border: 1px solid #FF5733; /* Same as color */
+  color: #FF5733; /* Unique color */
+}
+
+.dexterity {
+  grid-area: dexterity;
+  border: 1px solid #33A1FF; /* Same as color */
+  color: #33A1FF; /* Unique color */
+}
+
+.wisdom {
+  grid-area: wisdom;
+  border: 1px solid #FF33A1; /* Same as color */
+  color: #FF33A1; /* Unique color */
+}
+
+.strength {
+  grid-area: strength;
+  border: 1px solid #A1FF33; /* Same as color */
+  color: #A1FF33; /* Unique color */
+}
+
+.intelligence {
+  grid-area: intelligence;
+  border: 1px solid #FF5733; /* Same as color */
+  color: #FF5733; /* Unique color */
+}
+
+.proficiency-bonus {
+  grid-area: proficiency-bonus;
+  border: 1px solid #33FF57; /* Same as color */
+  color: #33FF57; /* Unique color */
+}
+
+.weapons-features-traits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.4fr 1.8fr 1.8fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "stats stats"
+    "weapons-cantrips weapons-cantrips"
+    "class-features class-features"
+    "species-traits Feats";
+  grid-area: weapons-features-traits;
+  border: 1px solid #5733FF; /* Same as color */
+  color: #5733FF; /* Unique color */
+}
+.stats{
+  grid-area: stats;
+  border: 1px solid #33A1FF; /* Same as color */
+  color: #33A1FF; /* Unique color */
+}
+.weapons-cantrips {
+  grid-area: weapons-cantrips;
+  border: 1px solid #FF33A1; /* Same as color */
+  color: #FF33A1; /* Unique color */
+}
+
+.class-features {
+  grid-area: class-features;
+  border: 1px solid #33FFA1; /* Same as color */
+  color: #33FFA1; /* Unique color */
+}
+
+.species-traits {
+  grid-area: species-traits;
+  border: 1px solid #A1FF33; /* Same as color */
+  color: #A1FF33; /* Unique color */
+}
+
+.Feats {
+  grid-area: Feats;
+  border: 1px solid #FF5733; /* Same as color */
+  color: #FF5733; /* Unique color */
+}
