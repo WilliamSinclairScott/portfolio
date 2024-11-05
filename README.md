@@ -18,10 +18,6 @@ Welcome to my portfolio! This site showcases my work and skills as a Software En
 
 This portfolio includes **Pixel Battle**, an passive canvas-based mini-game. Colorful pixels appear, grow, and collide with each other, creating explosion effects and a live scoreboard. This feature demonstrates animation, canvas manipulation, and real-time interaction.
 
-### D&D
-
-### D&D
-
 ## D&D
 
 This section is currently under construction. Please check back later for updates on my Dungeons & Dragons projects and tools.
