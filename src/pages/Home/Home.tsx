@@ -177,71 +177,71 @@ export default function Home() {
             </Flex>
           )}
         </Flex>
-        <Flex gap="4" direction={"column"}>
+        <Flex gap="4" direction={"column"} style={{ visibility: iconsVisible ? 'visible' : 'hidden' }}>
           <Box maxWidth={"420px"} minWidth={"410px"}>
             <Card>
               <Flex direction="column" align="center" justify="center">
-                <Text as="div" size="2" weight="bold">
-                  Building out custom ecommerce platform..
-                </Text>
-                <Text as="div" size="2" color="gray">
-                  <Flex align="center" gap="2">
-                    <GearIcon width={"18"} height={"18"} />
-                    <Text as="div" size="2" color="gray">
-                      Under construction
-                    </Text>
-                    <GearIcon width={"18"} height={"18"} />
-                  </Flex>
-                </Text>
+          <Text as="div" size="2" weight="bold">
+            Building out custom ecommerce platform..
+          </Text>
+          <Text as="div" size="2" color="gray">
+            <Flex align="center" gap="2">
+              <GearIcon width={"18"} height={"18"} />
+              <Text as="div" size="2" color="gray">
+                Under construction
+              </Text>
+              <GearIcon width={"18"} height={"18"} />
+            </Flex>
+          </Text>
               </Flex>
             </Card>
           </Box>
           <Box maxWidth={"420px"} minWidth={"410px"}>
             <Card>
               <Flex direction="column" align="center" justify="center">
-                <Text as="div" size="2" weight="bold">
-                  Came accross this cool start up and decided to help out!
-                </Text>
-                <Text as="div" size="2" color="gray">
-                  <Flex align="center" gap="2">
-                    <img
-                      src="/cookd.png"
-                      alt="Cookd Logo"
-                      width="24"
-                      height="24"
-                    />
-                    <Text as="div" size="2" color="gray">
-                      <a
-                        href="https://cookd.dev/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        If you're in HR you should check this out
-                      </a>
-                    </Text>
-                    <img
-                      src="/cookd.png"
-                      alt="Cookd Logo"
-                      width="24"
-                      height="24"
-                    />
-                  </Flex>
-                </Text>
+          <Text as="div" size="2" weight="bold">
+            Came accross this cool start up and decided to help out!
+          </Text>
+          <Text as="div" size="2" color="gray">
+            <Flex align="center" gap="2">
+              <img
+                src="/cookd.png"
+                alt="Cookd Logo"
+                width="24"
+                height="24"
+              />
+              <Text as="div" size="2" color="gray">
+                <a
+            href="https://cookd.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+                >
+            If you're in HR you should check this out
+                </a>
+              </Text>
+              <img
+                src="/cookd.png"
+                alt="Cookd Logo"
+                width="24"
+                height="24"
+              />
+            </Flex>
+          </Text>
               </Flex>
             </Card>
           </Box>
           <Box maxWidth={"420px"} minWidth={"410px"}>
             <Card>
               <Flex direction="column" align="center" justify="center">
-                <Text as="div" size="2" weight="bold">
-                  I worked here, making the website and backend better so
-                  communities have a cool place to meet.
-                </Text>
-                <Text as="div" size="2" color="gray">
-                  <a href="https://thebrooklynstrategist.com/">
-                    The Brooklyn Strategist
-                  </a>
-                </Text>
+          <Text as="div" size="2" weight="bold">
+            I worked here, making the website and backend better so
+            communities have a cool place to meet.
+          </Text>
+          <Text as="div" size="2" color="gray">
+            <a href="https://thebrooklynstrategist.com/">
+              The Brooklyn Strategist
+            </a>
+          </Text>
               </Flex>
             </Card>
           </Box>
