@@ -1,5 +1,13 @@
 import { useState, useEffect } from "react";
-import { Box, Flex, Text, Popover, IconButton, Card } from "@radix-ui/themes";
+import {
+  Box,
+  Flex,
+  Text,
+  Popover,
+  IconButton,
+  Card,
+  Link,
+} from "@radix-ui/themes";
 import {
   LinkedInLogoIcon,
   GearIcon,
@@ -123,20 +131,25 @@ export default function Home() {
             <Flex
               direction="row"
               gap="4"
-              className={`social-icons ${iconsVisible ? "visible" : ""}`} // Apply the visible class
+              className={`social-icons ${
+                iconsVisible ? "visible fade-in" : ""
+              }`} // Apply the visible and fade-in classes
             >
-              <a
+              <Link
                 href="https://www.linkedin.com/in/william-scott-8521bb197/"
-                target="_blank"
                 rel="noopener noreferrer"
-                style={{ color: "white" }}
+                style={{
+                  display: "inline-block",
+                  borderRadius: "",
+                }}
               >
-                <LinkedInLogoIcon
-                  width={"24"}
-                  height={"24"}
-                  className="social-icon"
-                />
-              </a>
+                <IconButton
+                  size={"4"}
+                  style={{ backgroundColor: "white", color: "black" }}
+                >
+                  <LinkedInLogoIcon width={"32"} height={"30"} />
+                </IconButton>
+              </Link>
               <Popover.Root>
                 <Popover.Trigger>
                   <IconButton
@@ -162,86 +175,95 @@ export default function Home() {
                   </Flex>
                 </Popover.Content>
               </Popover.Root>
-              <a
+              <Link
                 href="https://github.com/WilliamSinclairScott"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ color: "white" }}
+                style={{
+                  display: "inline-block",
+                  borderRadius: "",
+                }}
               >
-                <GitHubLogoIcon
-                  width={"24"}
-                  height={"24"}
-                  className="social-icon"
-                />
-              </a>
+                <IconButton
+                  size={"4"}
+                  style={{ backgroundColor: "white", color: "black" }}
+                >
+                  <GitHubLogoIcon width={"32"} height={"30"} />
+                </IconButton>
+              </Link>
             </Flex>
           )}
         </Flex>
-        <Flex gap="4" direction={"column"} style={{ visibility: iconsVisible ? 'visible' : 'hidden' }}>
+        <Flex
+          gap="4"
+          direction={"column"}
+          className={iconsVisible ? "fade-in" : ""}
+          style={{ visibility: iconsVisible ? "visible" : "hidden" }}
+        >
           <Box maxWidth={"420px"} minWidth={"410px"}>
             <Card>
               <Flex direction="column" align="center" justify="center">
-          <Text as="div" size="2" weight="bold">
-            Building out custom ecommerce platform..
-          </Text>
-          <Text as="div" size="2" color="gray">
-            <Flex align="center" gap="2">
-              <GearIcon width={"18"} height={"18"} />
-              <Text as="div" size="2" color="gray">
-                Under construction
-              </Text>
-              <GearIcon width={"18"} height={"18"} />
-            </Flex>
-          </Text>
+                <Text as="div" size="2" weight="bold">
+                  Building out custom ecommerce platform..
+                </Text>
+                <Text as="div" size="2" color="gray">
+                  <Flex align="center" gap="2">
+                    <GearIcon width={"18"} height={"18"} />
+                    <Text as="div" size="2" color="gray">
+                      Under construction
+                    </Text>
+                    <GearIcon width={"18"} height={"18"} />
+                  </Flex>
+                </Text>
               </Flex>
             </Card>
           </Box>
           <Box maxWidth={"420px"} minWidth={"410px"}>
             <Card>
               <Flex direction="column" align="center" justify="center">
-          <Text as="div" size="2" weight="bold">
-            Came accross this cool start up and decided to help out!
-          </Text>
-          <Text as="div" size="2" color="gray">
-            <Flex align="center" gap="2">
-              <img
-                src="/cookd.png"
-                alt="Cookd Logo"
-                width="24"
-                height="24"
-              />
-              <Text as="div" size="2" color="gray">
-                <a
-            href="https://cookd.dev/"
-            target="_blank"
-            rel="noopener noreferrer"
-                >
-            If you're in HR you should check this out
-                </a>
-              </Text>
-              <img
-                src="/cookd.png"
-                alt="Cookd Logo"
-                width="24"
-                height="24"
-              />
-            </Flex>
-          </Text>
+                <Text as="div" size="2" weight="bold">
+                  Came accross this cool start up and decided to help out!
+                </Text>
+                <Text as="div" size="2" color="gray">
+                  <Flex align="center" gap="2">
+                    <img
+                      src="/cookd.png"
+                      alt="Cookd Logo"
+                      width="24"
+                      height="24"
+                    />
+                    <Text as="div" size="2" color="gray">
+                      <a
+                        href="https://cookd.dev/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        If you're in HR you should check this out
+                      </a>
+                    </Text>
+                    <img
+                      src="/cookd.png"
+                      alt="Cookd Logo"
+                      width="24"
+                      height="24"
+                    />
+                  </Flex>
+                </Text>
               </Flex>
             </Card>
           </Box>
           <Box maxWidth={"420px"} minWidth={"410px"}>
             <Card>
               <Flex direction="column" align="center" justify="center">
-          <Text as="div" size="2" weight="bold">
-            I worked here, making the website and backend better so
-            communities have a cool place to meet.
-          </Text>
-          <Text as="div" size="2" color="gray">
-            <a href="https://thebrooklynstrategist.com/">
-              The Brooklyn Strategist
-            </a>
-          </Text>
+                <Text as="div" size="2" weight="bold">
+                  I worked here, making the website and backend better so
+                  communities have a cool place to meet.
+                </Text>
+                <Text as="div" size="2" color="gray">
+                  <a href="https://thebrooklynstrategist.com/">
+                    The Brooklyn Strategist
+                  </a>
+                </Text>
               </Flex>
             </Card>
           </Box>
