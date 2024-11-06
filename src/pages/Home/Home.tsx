@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { Box, Flex, Text, Popover, IconButton } from "@radix-ui/themes";
+import { Box, Flex, Text, Popover, IconButton, Card } from "@radix-ui/themes";
 import {
   LinkedInLogoIcon,
+  GearIcon,
   GitHubLogoIcon,
   EnvelopeClosedIcon,
 } from "@radix-ui/react-icons";
@@ -90,7 +91,7 @@ export default function Home() {
     <Box className="portfolio-section">
       <War />
       <Flex
-        direction={{ "lg": "row", "md": "column", "sm": "column", "xs": "column" }}
+        direction={{ lg: "row", md: "column", sm: "column", xs: "column" }}
         align="center"
         justify="center"
         gap="8"
@@ -98,78 +99,153 @@ export default function Home() {
       >
         <Flex direction="column" align="center" gap="4" className="text-box">
           <Text size="7" align="center" className="intro-text">
-        {typedText}
-        {cursorVisible && cursorPosition === "firstLine" && (
-          <span className="cursor typing">|</span>
-        )}
+            {typedText}
+            {cursorVisible && cursorPosition === "firstLine" && (
+              <span className="cursor typing">|</span>
+            )}
           </Text>
           <Text size="5" className="subtitle">
-        {subtitle}
-        {cursorVisible && cursorPosition === "secondLine" && (
-          <span className="cursor">|</span>
-        )}
+            {subtitle}
+            {cursorVisible && cursorPosition === "secondLine" && (
+              <span className="cursor">|</span>
+            )}
           </Text>
           <pre
-        className={`intro-description code-block ${
-          highlightedDescription ? "highlighted" : ""
-        }`}
+            className={`intro-description code-block ${
+              highlightedDescription ? "highlighted" : ""
+            }`}
           >
-        <Text size="4" align="center">
-          {actualDescription}
-        </Text>
+            <Text size="4" align="center">
+              {actualDescription}
+            </Text>
           </pre>
           {iconsVisible && (
-        <Flex
-          direction="row"
-          gap="4"
-          className={`social-icons ${iconsVisible ? "visible" : ""}`} // Apply the visible class
-        >
-          <a
-            href="https://www.linkedin.com/in/william-scott-8521bb197/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <LinkedInLogoIcon className="social-icon" />
-          </a>
-          <Popover.Root>
-            <Popover.Trigger>
-          <IconButton>
-            <EnvelopeClosedIcon />
-          </IconButton>
-            </Popover.Trigger>
-            <Popover.Content sideOffset={5} align="center">
-          <Flex direction="column" gap="2" className="popover-text">
-            <Text size="2">Phone: +1 (319) 855 3580</Text>
-            <Text size="2">
-              Email:{" "}
+            <Flex
+              direction="row"
+              gap="4"
+              className={`social-icons ${iconsVisible ? "visible" : ""}`} // Apply the visible class
+            >
               <a
-            href="mailto:william.sinclair.scott@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/william-scott-8521bb197/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "white" }}
               >
-            william.sinclair.scott@gmail.com
+                <LinkedInLogoIcon
+                  width={"24"}
+                  height={"24"}
+                  className="social-icon"
+                />
               </a>
-            </Text>
-          </Flex>
-            </Popover.Content>
-          </Popover.Root>
-          <a
-            href="https://github.com/WilliamSinclairScott"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <GitHubLogoIcon className="social-icon" />
-          </a>
-        </Flex>
+              <Popover.Root>
+                <Popover.Trigger>
+                  <IconButton
+                    size={"3"}
+                    style={{ backgroundColor: "white", color: "black" }}
+                  >
+                    <EnvelopeClosedIcon width={"18"} height={"18"} />
+                  </IconButton>
+                </Popover.Trigger>
+                <Popover.Content sideOffset={5} align="center">
+                  <Flex direction="column" gap="2" className="popover-text">
+                    <Text size="2">Phone: +1 (319) 855 3580</Text>
+                    <Text size="2">
+                      Email:{" "}
+                      <a
+                        href="mailto:william.sinclair.scott@gmail.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        william.sinclair.scott@gmail.com
+                      </a>
+                    </Text>
+                  </Flex>
+                </Popover.Content>
+              </Popover.Root>
+              <a
+                href="https://github.com/WilliamSinclairScott"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "white" }}
+              >
+                <GitHubLogoIcon
+                  width={"24"}
+                  height={"24"}
+                  className="social-icon"
+                />
+              </a>
+            </Flex>
           )}
         </Flex>
-        <Box className="image-box">
-          <img
-        src="/portrait.jpg"
-        alt="William Scott"
-        className="profile-photo"
-          />
-        </Box>
+        <Flex gap="4" direction={"column"}>
+          <Box maxWidth={"420px"} minWidth={"410px"}>
+            <Card>
+              <Flex direction="column" align="center" justify="center">
+                <Text as="div" size="2" weight="bold">
+                  Building out custom ecommerce platform..
+                </Text>
+                <Text as="div" size="2" color="gray">
+                  <Flex align="center" gap="2">
+                    <GearIcon width={"18"} height={"18"} />
+                    <Text as="div" size="2" color="gray">
+                      Under construction
+                    </Text>
+                    <GearIcon width={"18"} height={"18"} />
+                  </Flex>
+                </Text>
+              </Flex>
+            </Card>
+          </Box>
+          <Box maxWidth={"420px"} minWidth={"410px"}>
+            <Card>
+              <Flex direction="column" align="center" justify="center">
+                <Text as="div" size="2" weight="bold">
+                  Came accross this cool start up and decided to help out!
+                </Text>
+                <Text as="div" size="2" color="gray">
+                  <Flex align="center" gap="2">
+                    <img
+                      src="/cookd.png"
+                      alt="Cookd Logo"
+                      width="24"
+                      height="24"
+                    />
+                    <Text as="div" size="2" color="gray">
+                      <a
+                        href="https://cookd.dev/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        If you're in HR you should check this out
+                      </a>
+                    </Text>
+                    <img
+                      src="/cookd.png"
+                      alt="Cookd Logo"
+                      width="24"
+                      height="24"
+                    />
+                  </Flex>
+                </Text>
+              </Flex>
+            </Card>
+          </Box>
+          <Box maxWidth={"420px"} minWidth={"410px"}>
+            <Card>
+              <Flex direction="column" align="center" justify="center">
+                <Text as="div" size="2" weight="bold">
+                  I worked here, making the website and backend better so
+                  communities have a cool place to meet.
+                </Text>
+                <Text as="div" size="2" color="gray">
+                  <a href="https://thebrooklynstrategist.com/">
+                    The Brooklyn Strategist
+                  </a>
+                </Text>
+              </Flex>
+            </Card>
+          </Box>
+        </Flex>
       </Flex>
     </Box>
   );

@@ -107,10 +107,6 @@ body, html {
     max-width: 100%;
   }
 
-  .image-box {
-    margin-top: 2rem;
-  }
-
   .intro-text {
     font-size: 2.5rem;
   }
@@ -138,6 +134,7 @@ body, html {
 /* Add this to the CSS */
 .social-icons {
   opacity: 0;
+  fill: #ffffff; /* Ensures the SVG icons are white */
   visibility: hidden;
   transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
 }
