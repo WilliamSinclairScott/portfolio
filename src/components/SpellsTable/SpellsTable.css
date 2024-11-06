@@ -1,0 +1,140 @@
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.spells-table {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.spells-table-container {
+  height: calc(50vh - 100px);
+  overflow-y: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+  background-color: #f1f3f5;
+  z-index: 1;
+}
+
+th, td {
+  padding: 0.4rem 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+  font-weight: 600;
+  color: #4a4a4a;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+th:hover {
+  background-color: #e9ecef;
+}
+
+th .header-content {
+  display: flex;
+  align-items: center;
+}
+
+th svg {
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-left: 0.25rem;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+tbody tr:hover {
+  background-color: #e9ecef;
+}
+
+.spell-detail {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  color: #2563eb;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.back-button:hover {
+  color: #1d4ed8;
+}
+
+.back-button svg {
+  width: 0.875rem;
+  height: 0.875rem;
+  margin-right: 0.25rem;
+}
+
+.spell-detail h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.spell-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.5rem;
+}
+
+.spell-info p {
+  margin: 0;
+}
+
+.spell-info span {
+  font-weight: 600;
+}
+
+.col-name { width: 25%; }
+.col-level, .col-time, .col-school, .col-concentration { width: 10%; }
+.col-range, .col-source { width: 15%; }
+
+@media (max-width: 768px) {
+  .spells-table-container {
+    height: calc(50vh - 80px);
+  }
+  
+  th, td {
+    padding: 0.3rem 0.4rem;
+  }
+  
+  .col-name { width: auto; }
+  .col-level, .col-time, .col-school, .col-concentration, .col-range, .col-source { width: auto; }
+}

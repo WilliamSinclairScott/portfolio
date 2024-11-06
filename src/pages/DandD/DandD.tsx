@@ -1,5 +1,9 @@
+<<<<<<< Updated upstream
 import "./DandD.css";
 import CharacterSheetHeader, { CharacterSheetHeaderProps } from "../../components/CharacterSheetHeader";
+=======
+import SpellsTable from "../../components/SpellsTable/SpellsTable";
+>>>>>>> Stashed changes
 
 export default function DandD() {
 
@@ -23,6 +27,7 @@ export default function DandD() {
   };
 
   return (
+<<<<<<< Updated upstream
     <div className="charater-sheet">
       <div className="character-information">
         <CharacterSheetHeader {...props} />
@@ -46,6 +51,12 @@ export default function DandD() {
           <div className="Feats"></div>
         </div>
       </div>
+=======
+    <div className="under-construction">
+      <h1>Under Construction</h1>
+      <p>This page is currently under construction. Please check back later.</p>
+      <SpellsTable />
+>>>>>>> Stashed changes
     </div>
   );
 }
