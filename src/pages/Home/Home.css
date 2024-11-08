@@ -1,18 +1,15 @@
 body, html {
   margin: 0;
   padding: 0;
-  height: 100%;
   font-family: 'Arial', sans-serif;
   background-color: #ffffff;
 }
 
 .portfolio-section {
-  position: relative;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 4%;
+  height: 100vh;
 }
 
 .content-wrapper {
@@ -107,10 +104,6 @@ body, html {
     max-width: 100%;
   }
 
-  .image-box {
-    margin-top: 2rem;
-  }
-
   .intro-text {
     font-size: 2.5rem;
   }
@@ -138,6 +131,7 @@ body, html {
 /* Add this to the CSS */
 .social-icons {
   opacity: 0;
+  fill: #ffffff; /* Ensures the SVG icons are white */
   visibility: hidden;
   transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
 }
@@ -145,4 +139,19 @@ body, html {
 .social-icons.visible {
   opacity: 1;
   visibility: visible;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
 }
