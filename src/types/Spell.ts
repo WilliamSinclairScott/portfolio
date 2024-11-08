@@ -5,38 +5,18 @@ interface TimeEntry {
 
 type Time = TimeEntry[];
 
-interface RangeBase {
+export interface Distance {
+  amount?: number;
   type: string;
 }
 
-interface DistanceRange extends RangeBase {
-  type: "distance";
-  distance: {
-    type: string;
-    amount: number;
-  };
+export interface Range {
+  type: string;
+  distance?: Distance | string;
 }
-
-interface SelfRange extends RangeBase {
-  type: "self";
-}
-
-interface TouchRange extends RangeBase {
-  type: "touch";
-}
-
-interface SightRange extends RangeBase {
-  type: "sight";
-}
-
-interface UnlimitedRange extends RangeBase {
-  type: "unlimited";
-}
-
-type Range = DistanceRange | SelfRange | TouchRange | SightRange | UnlimitedRange | object;
 
 interface DurationBase {
-  type: string;
+  type: 'instant' | 'timed' | 'special' | 'permanent';
 }
 
 interface InstantDuration extends DurationBase {
@@ -56,7 +36,11 @@ interface SpecialDuration extends DurationBase {
   type: "special";
 }
 
-type Duration = InstantDuration | TimedDuration | SpecialDuration;
+interface PermanentDuration extends DurationBase {
+  type: "permanent";
+}
+
+export type Duration = InstantDuration | TimedDuration | SpecialDuration | PermanentDuration;
 
 interface ScalingLevelDiceByLevel {
   [level: number]: string;
@@ -86,10 +70,10 @@ type EntriesHigherLevel = TextEntry | ObjectEntry;
 
 export interface Spell {
   name: string;
+  level: number;
   source: string;
   page: number;
   freeRules2024: boolean;
-  level: number;
   school: string;
   time: Time;
   range: Range;

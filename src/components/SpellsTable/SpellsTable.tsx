@@ -1,21 +1,101 @@
-"use client";
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import spellsData from "../../data/spells-xphb.json"; // Adjust the path as needed
-import { Spell } from "../../types/Spell";
+import { Spell, Duration } from "../../types/Spell";
 import "./SpellsTable.css";
 
 export default function SpellsPage() {
-  const [spells, setSpells] = useState<Spell[]>(spellsData.spell || []);
+  const [spells, setSpells] = useState<Spell[]>([]);
+
+  useEffect(() => {
+    // Ensure data structure matches expected format
+    //TODO: FIx any types
+    if (spellsData && Array.isArray(spellsData.spell)) {
+      const transformedSpells = spellsData.spell.map((spell: any) => {
+        // Transform the duration property if necessary
+        const transformedDuration: Duration[] = spell.duration.map((d: any) => {
+          switch (d.type) {
+            case "instant":
+              return { type: "instant" };
+            case "permanent":
+              return { type: "permanent" };
+            case "timed":
+              return {
+                type: "timed",
+                duration: {
+                  type: d.duration.type,
+                  amount: d.duration.amount,
+                },
+                concentration: d.concentration,
+              };
+            case "special":
+              return { type: "special" };
+            default:
+              throw new Error(`Unknown duration type: ${d.type}`);
+          }
+        });
+        return { ...spell, duration: transformedDuration };
+      });
+      setSpells(transformedSpells);
+    } else {
+      console.error('Invalid data format');
+    }
+  }, []);
+
   const [selectedSpell, setSelectedSpell] = useState<Spell | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
+  const [sortOrder, setSortOrder] = useState<"asc" | "desc" | "none">("none");
 
   const handleSort = (key: keyof Spell) => {
-    const sortedSpells = [...spells].sort((a, b) => {
-      if (a[key] < b[key]) return -1;
-      if (a[key] > b[key]) return 1;
-      return 0;
-    });
+    let sortedSpells = [...spells];
+
+    if (sortOrder === "none" || sortOrder === "desc") {
+      sortedSpells.sort((a, b) => {
+        const aValue = a[key] !== undefined ? a[key] : '';
+        const bValue = b[key] !== undefined ? b[key] : '';
+  
+        if (aValue < bValue) return -1;
+        if (aValue > bValue) return 1;
+        return 0;
+      });
+      setSortOrder("asc");
+    } else if (sortOrder === "asc") {
+      sortedSpells.sort((a, b) => {
+        const aValue = a[key] !== undefined ? a[key] : '';
+        const bValue = b[key] !== undefined ? b[key] : '';
+  
+        if (aValue < bValue) return 1;
+        if (aValue > bValue) return -1;
+        return 0;
+      });
+      setSortOrder("desc");
+    } else {
+      sortedSpells = spellsData.spell.map((spell: any) => {
+        const transformedDuration: Duration[] = spell.duration.map((d: any) => {
+          switch (d.type) {
+            case "instant":
+              return { type: "instant" };
+            case "permanent":
+              return { type: "permanent" };
+            case "timed":
+              return {
+                type: "timed",
+                duration: {
+                  type: d.duration.type,
+                  amount: d.duration.amount,
+                },
+                concentration: d.concentration,
+              };
+            case "special":
+              return { type: "special" };
+            default:
+              throw new Error(`Unknown duration type: ${d.type}`);
+          }
+        });
+        return { ...spell, duration: transformedDuration };
+      });
+      setSortOrder("none");
+    }
+
     setSpells(sortedSpells);
   };
 
@@ -24,10 +104,31 @@ export default function SpellsPage() {
   };
 
   const renderRange = (spell: Spell) => {
-    if (spell.range.type === "point") {
-      return `${spell.range.distance.amount} ${spell.range.distance.type}`;
+    const { type, distance } = spell.range;
+
+    if (typeof distance === "object" && distance !== null) {
+      if ("amount" in distance && "type" in distance) {
+        return `${distance.amount} ${distance.type}`;
+      }
+      switch (distance.type) {
+        case "self":
+          return "Self";
+        case "touch":
+          return "Touch";
+        case "sight":
+          return "Sight";
+        case "unlimited":
+          return "Unlimited";
+        default:
+          return type;
+      }
     }
-    return spell.range.type;
+
+    if (typeof distance === "string") {
+      return distance;
+    }
+
+    return type;
   };
 
   const filteredSpells = spells.filter((spell) =>
@@ -215,7 +316,7 @@ export default function SpellsPage() {
             <p>{selectedSpell.entries.join(" ")}</p>
             {selectedSpell.entriesHigherLevel &&
               
-              selectedSpell.entriesHigherLevel[0].type === "entries" && (
+              selectedSpell.entriesHigherLevel.type === "entries" && (
                 <p>{selectedSpell.entriesHigherLevel.entries.join(" ")}</p>
               )}
           </div>
