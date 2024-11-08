@@ -32,15 +32,14 @@
 			"entries": [
 				"You create an acidic bubble at a point within range, where it explodes in a 5-foot-radius Sphere. Each creature in that Sphere must succeed on a Dexterity saving throw or take {@damage 1d6} Acid damage."
 			],
-			"entriesHigherLevel": [
-				{
+			"entriesHigherLevel": {
 					"type": "entries",
 					"name": "Cantrip Upgrade",
 					"entries": [
 						"The damage increases by {@dice 1d6} when you reach levels 5 ({@damage 2d6}), 11 ({@damage 3d6}), and 17 ({@damage 4d6})."
 					]
 				}
-			],
+			,
 			"scalingLevelDice": {
 				"label": "Acid damage",
 				"scaling": {
@@ -101,7 +100,7 @@
 			"entries": [
 				"Choose up to three creatures within range. Each target's {@variantrule Hit Points|XPHB|Hit Point} maximum and current {@variantrule Hit Points|XPHB} increase by 5 for the duration."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -109,7 +108,7 @@
 						"Each target's {@variantrule Hit Points|XPHB} increase by 5 for each spell slot level above 2."
 					]
 				}
-			],
+			,
 			"miscTags": [
 				"HL"
 			],
@@ -281,7 +280,7 @@
 			"entries": [
 				"Target a Beast that you can see within range. The target must succeed on a Wisdom saving throw or have the {@condition Charmed|XPHB} condition for the duration. If you or one of your allies deals damage to the target, the spells ends."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -289,7 +288,7 @@
 						"You can target one additional Beast for each spell slot level above 1."
 					]
 				}
-			],
+			,
 			"conditionInflict": [
 				"charmed"
 			],
@@ -348,7 +347,7 @@
 				"A {@filter Tiny Beast|bestiary|size=T|type=beast|miscellaneous=!swarm} of your choice that you can see within range must succeed on a Charisma saving throw, or it attempts to deliver a message for you (if the target's {@variantrule Challenge Rating|XPHB} isn't 0, it automatically succeeds). You specify a location you have visited and a recipient who matches a general description, such as \"a person dressed in the uniform of the town guard\" or \"a red-haired dwarf wearing a pointed hat.\" You also communicate a message of up to twenty-five words. The Beast travels for the duration toward the specified location, covering about 25 miles per 24 hours or 50 miles if the Beast can fly.",
 				"When the Beast arrives, it delivers your message to the creature that you described, mimicking your communication. If the Beast doesn't reach its destination before the spell ends, the message is lost, and the Beast returns to where you cast the spell."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -356,7 +355,7 @@
 						"The spell's duration increases by 48 hours for each spell slot level above 2."
 					]
 				}
-			],
+			,
 			"savingThrow": [
 				"charisma"
 			],
@@ -451,7 +450,7 @@
 				"On each of your turns, you can take a {@variantrule Bonus Action|XPHB} to mentally command any creature you made with this spell if the creature is within 60 feet of you (if you control multiple creatures, you can command any of them at the same time, issuing the same command to each one). You decide what action the creature will take and where it will move on its next turn, or you can issue a general command, such as to guard a chamber or corridor. If you issue no commands, the creature takes the {@action Dodge|XPHB} action and moves only to avoid harm. Once given an order, the creature continues to follow it until its task is complete.",
 				"The creature is under your control for 24 hours, after which it stops obeying any command you've given it. To maintain control of the creature for another 24 hours, you must cast this spell on the creature again before the current 24-hour period ends. This use of the spell reasserts your control over up to four creatures you have animated with this spell rather than animating a new creature."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -459,7 +458,7 @@
 						"You animate or reassert control over two additional Undead creatures for each spell slot level above 3. Each of the creatures must come from a different corpse or pile of bones."
 					]
 				}
-			],
+			,
 			"affectsCreatureType": [
 				"humanoid"
 			],
@@ -508,7 +507,7 @@
 				"Each target animates, sprouts legs, and becomes a Construct that uses the {@creature Animated Object|XPHB} stat block; this creature is under your control until the spell ends or until it is reduced to 0 {@variantrule Hit Points|XPHB}. Each creature you make with this spell is an ally to you and your allies. In combat, it shares your {@variantrule Initiative|XPHB} count and takes its turn immediately after yours.",
 				"Until the spell ends, you can take a {@variantrule Bonus Action|XPHB} to mentally command any creature you made with this spell if the creature is within 500 feet of you (if you control multiple creatures, you can command any of them at the same time, issuing the same command to each one). If you issue no commands, the creature takes the {@action Dodge|XPHB} action and moves only to avoid harm. When the creature drops to 0 {@variantrule Hit Points|XPHB}, it reverts to its object form, and any remaining damage carries over to that form."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -516,7 +515,7 @@
 						"The creature's Slam damage increases by {@dice 1d4} (Medium or smaller), {@dice 1d6} (Large), or {@dice 1d12} (Huge) for each spell slot level above 5."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"bludgeoning",
 				"piercing",
@@ -875,7 +874,7 @@
 			"entries": [
 				"You tap into your life force to heal yourself. Roll one or two of your unexpended {@variantrule Hit Point Dice|XPHB}, and regain a number of {@variantrule Hit Points|XPHB} equal to the roll's total plus your spellcasting ability modifier. Those dice are then expended."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -883,7 +882,7 @@
 						"The number of unexpended Hit Dice you can roll increases by one for each spell slot level above 2."
 					]
 				}
-			],
+			,
 			"miscTags": [
 				"HL"
 			]
@@ -923,7 +922,7 @@
 			"entries": [
 				"Protective magical frost surrounds you. You gain 5 {@variantrule Temporary Hit Points|XPHB}. If a creature hits you with a melee attack roll before the spell ends, the creature takes 5 Cold damage. The spell ends early if you have no {@variantrule Temporary Hit Points|XPHB}."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -931,7 +930,7 @@
 						"The {@variantrule Temporary Hit Points|XPHB} and the Cold damage both increase by 5 for each spell slot level above 1."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"cold"
 			],
@@ -971,7 +970,7 @@
 			"entries": [
 				"Invoking Hadar, you cause tendrils to erupt from yourself. Each creature in a 10-foot Emanation originating from you makes a Strength saving throw. On a failed save, a target takes {@damage 2d6} Necrotic damage and can't take Reactions until the start of its next turn. On a successful save, a target takes half as much damage only."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -979,7 +978,7 @@
 						"The damage increases by {@scaledamage 2d6|1-9|1d6} for each spell slot level above 1."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"necrotic"
 			],
@@ -1339,7 +1338,7 @@
 			"entries": [
 				"Up to three creatures of your choice that you can see within range must each make a Charisma saving throw. Whenever a target that fails this save makes an attack roll or a saving throw before the spell ends, the target must subtract {@dice 1d4} from the attack roll or save."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -1347,7 +1346,7 @@
 						"You can target one additional creature for each spell slot level above 1."
 					]
 				}
-			],
+			,
 			"savingThrow": [
 				"charisma"
 			],
@@ -1443,7 +1442,7 @@
 				"One creature that you can see within range must succeed on a Charisma saving throw or be transported to a harmless demiplane for the duration. While there, the target has the {@condition Incapacitated|XPHB} condition. When the spell ends, the target reappears in the space it left or in the nearest unoccupied space if that space is occupied.",
 				"If the target is an Aberration, a Celestial, an Elemental, a Fey, or a Fiend, the target doesn't return if the spell lasts for 1 minute. The target is instead transported to a random location on a plane (DM's choice) associated with its creature type."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -1451,7 +1450,7 @@
 						"You can target one additional creature for each spell slot level above 4."
 					]
 				}
-			],
+			,
 			"conditionInflict": [
 				"incapacitated"
 			],
@@ -1689,7 +1688,7 @@
 					]
 				}
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -1697,7 +1696,7 @@
 						"If you cast this spell using a level 4 spell slot, you can maintain {@status Concentration|XPHB} on it for up to 10 minutes. If you use a level 5+ spell slot, the spell doesn't require {@status Concentration|XPHB}, and the duration becomes 8 hours (level 5-6 slot) or 24 hours (level 7-8 slot). If you use a level 9 spell slot, the spell lasts until dispelled."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"necrotic"
 			],
@@ -1785,7 +1784,7 @@
 					]
 				}
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -1793,7 +1792,7 @@
 						"The damage of the Clenched Fist increases by {@scaledamage 4d8|5-9|2d8} and the damage of the Grasping Hand increases by {@scaledamage 2d6|5-9|2d6} for each spell slot level above 5."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"bludgeoning",
 				"force"
@@ -1945,15 +1944,15 @@
 			"entries": [
 				"You bless up to three creatures within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target adds {@dice 1d4} to the attack roll or save."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
 					"entries": [
 						"You can target one additional creature for each spell slot level above 1."
 					]
-				}
-			],
+			}
+			,
 			"miscTags": [
 				"SCT"
 			],
@@ -1994,7 +1993,7 @@
 				"A creature that you can see within range makes a Constitution saving throw, taking {@damage 8d8} Necrotic damage on a failed save or half as much damage on a successful one. A Plant creature automatically fails the save.",
 				"Alternatively, target a nonmagical plant that isn't a creature, such as a tree or shrub. It doesn't make a save; it simply withers and dies."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -2002,7 +2001,7 @@
 						"The damage increases by {@scaledamage 8d8|4-9|1d8} for each spell slot level above 4."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"necrotic"
 			],
@@ -2050,7 +2049,7 @@
 			"entries": [
 				"The target hit by the strike takes an extra {@damage 3d8} Radiant damage from the attack, and the target has the {@condition Blinded|XPHB} condition until the spell ends. At the end of each of its turns, the {@condition Blinded|XPHB} target makes a Constitution saving throw, ending the spell on itself on a success."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -2058,7 +2057,7 @@
 						"The extra damage increases by {@scaledamage 3d8|3-9|1d8} for each spell slot level above 3."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"radiant"
 			],
@@ -2107,7 +2106,7 @@
 			"entries": [
 				"One creature that you can see within range must succeed on a Constitution saving throw, or it has the {@condition Blinded|XPHB} or {@condition Deafened|XPHB} condition (your choice) for the duration. At the end of each of its turns, the target repeats the save, ending the spell on itself on a success."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -2115,7 +2114,7 @@
 						"You can target one additional creature for each spell slot level above 2."
 					]
 				}
-			],
+			,
 			"conditionInflict": [
 				"blinded",
 				"deafened"
@@ -2240,7 +2239,7 @@
 				"A thin sheet of flames shoots forth from you. Each creature in a 15-foot Cone makes a Dexterity saving throw, taking {@damage 3d6} Fire damage on a failed save or half as much damage on a successful one.",
 				"Flammable objects in the Cone that aren't being worn or carried start {@hazard burning|XPHB}."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -2248,7 +2247,7 @@
 						"The damage increases by {@scaledamage 3d6|1-9|1d6} for each spell slot level above 1."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"fire"
 			],
@@ -2302,7 +2301,7 @@
 				"Until the spell ends, you can take a {@action Magic|XPHB} action to call down lightning in that way again, targeting the same point or a different one.",
 				"If you're outdoors in a storm when you cast this spell, the spell gives you control over that storm instead of creating a new one. Under such conditions, the spell's damage increases by {@dice 1d10}."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -2310,7 +2309,7 @@
 						"The damage increases by {@scaledamage 3d10|3-9|1d10} for each spell slot level above 3."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"lightning"
 			],
@@ -2413,7 +2412,7 @@
 				"You launch a lightning bolt toward a target you can see within range. Three bolts then leap from that target to as many as three other targets of your choice, each of which must be within 30 feet of the first target. A target can be a creature or an object and can be targeted by only one of the bolts.",
 				"Each target makes a Dexterity saving throw, taking {@damage 10d8} Lightning damage on a failed save or half as much damage on a successful one."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -2421,7 +2420,7 @@
 						"One additional bolt leaps from the first target to another target for each spell slot level above 6."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"lightning"
 			],
@@ -2474,7 +2473,7 @@
 			"entries": [
 				"One creature you can see within range makes a Wisdom saving throw. It does so with {@variantrule Advantage|XPHB} if you or your allies are fighting it. On a failed save, the target has the {@condition Charmed|XPHB} condition until the spell ends or until you or your allies damage it. The {@condition Charmed|XPHB} creature is Friendly to you. When the spell ends, the target knows it was {@condition Charmed|XPHB} by you."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -2482,7 +2481,7 @@
 						"You can target one additional creature for each spell slot level above 4."
 					]
 				}
-			],
+			,
 			"conditionInflict": [
 				"charmed"
 			],
@@ -2533,7 +2532,7 @@
 			"entries": [
 				"One Humanoid you can see within range makes a Wisdom saving throw. It does so with {@variantrule Advantage|XPHB} if you or your allies are fighting it. On a failed save, the target has the {@condition Charmed|XPHB} condition until the spell ends or until you or your allies damage it. The {@condition Charmed|XPHB} creature is Friendly to you. When the spell ends, the target knows it was {@condition Charmed|XPHB} by you."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -2541,7 +2540,7 @@
 						"You can target one additional creature for each spell slot level above 1."
 					]
 				}
-			],
+			,
 			"conditionInflict": [
 				"charmed"
 			],
@@ -2590,7 +2589,7 @@
 			"entries": [
 				"Channeling the chill of the grave, make a melee spell attack against a target within reach. On a hit, the target takes {@damage 1d10} Necrotic damage, and it can't regain {@variantrule Hit Points|XPHB} until the end of your next turn."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Cantrip Upgrade",
@@ -2598,7 +2597,7 @@
 						"The damage increases by {@dice 1d10} when you reach levels 5 ({@damage 2d10}), 11 ({@damage 3d10}), and 17 ({@damage 4d10})."
 					]
 				}
-			],
+			,
 			"scalingLevelDice": {
 				"label": "necrotic damage",
 				"scaling": {
@@ -2658,7 +2657,7 @@
 				"You hurl an orb of energy at a target within range. Choose Acid, Cold, Fire, Lightning, Poison, or Thunder for the type of orb you create, and then make a ranged spell attack against the target. On a hit, the target takes {@damage 3d8} damage of the chosen type.",
 				"If you roll the same number on two or more of the d8s, the orb leaps to a different target of your choice within 30 feet of the target. Make an attack roll against the new target, and make a new damage roll. The orb can't leap again unless you cast the spell with a level 2+ spell slot."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -2666,7 +2665,7 @@
 						"The damage increases by {@scaledamage 3d8|1-9|1d8} for each spell slot level above 1. The orb can leap a maximum number of times equal to the level of the slot expended, and a creature can be targeted only once by each casting of this spell."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"acid",
 				"cold",
@@ -2722,7 +2721,7 @@
 			"entries": [
 				"Negative energy ripples out in a 60-foot-radius Sphere from a point you choose within range. Each creature in that area makes a Constitution saving throw, taking {@damage 8d8} Necrotic damage on a failed save or half as much damage on a successful one."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -2730,7 +2729,7 @@
 						"The damage increases by {@scaledamage 8d8|6-9|2d8} for each spell slot level above 6."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"necrotic"
 			],
@@ -2909,7 +2908,7 @@
 				"You conjure spinning daggers in a 5-foot Cube centered on a point within range. Each creature in that area takes {@damage 4d4} Slashing damage. A creature also takes this damage if it enters the Cube or ends its turn there or if the Cube moves into its space. A creature takes this damage only once per turn.",
 				"On your later turns, you can take a {@action Magic|XPHB} action to teleport the Cube up to 30 feet."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -2917,7 +2916,7 @@
 						"The damage increases by {@scaledamage 4d4|2-9|2d4} for each spell slot level above 2."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"slashing"
 			],
@@ -2964,7 +2963,7 @@
 				"Each creature in the Sphere makes a Constitution saving throw, taking {@damage 5d8} Poison damage on a failed save or half as much damage on a successful one. A creature must also make this save when the Sphere moves into its space and when it enters the Sphere or ends its turn there. A creature makes this save only once per turn.",
 				"The Sphere moves 10 feet away from you at the start of each of your turns."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -2972,7 +2971,7 @@
 						"The damage increases by {@scaledamage 5d8|5-9|1d8} for each spell slot level above 5."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"poison"
 			],
@@ -3101,7 +3100,7 @@
 					]
 				}
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -3109,7 +3108,7 @@
 						"You can affect one additional creature for each spell slot level above 1."
 					]
 				}
-			],
+			,
 			"conditionInflict": [
 				"prone"
 			],
@@ -3384,7 +3383,7 @@
 			"entries": [
 				"You unleash a blast of cold air. Each creature in a 60-foot Cone originating from you makes a Constitution saving throw, taking {@damage 8d8} Cold damage on a failed save or half as much damage on a successful one. A creature killed by this spell becomes a frozen statue until it thaws."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -3392,7 +3391,7 @@
 						"The damage increases by {@scaledamage 8d8|5-9|1d8} for each spell slot level above 5."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"cold"
 			],
@@ -3472,7 +3471,7 @@
 				},
 				"At the end of each of its turns, an affected target repeats the save, ending the spell on itself on a success."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -3480,7 +3479,7 @@
 						"The Sphere's radius increases by 5 feet for each spell slot level above 4."
 					]
 				}
-			],
+			,
 			"savingThrow": [
 				"wisdom"
 			],
@@ -3530,7 +3529,7 @@
 				"You have {@variantrule Advantage|XPHB} on Strength saving throws while you're within 5 feet of the pack, and when you move on your turn, you can also move the pack up to 30 feet to an unoccupied space you can see.",
 				"Whenever the pack moves within 10 feet of a creature you can see and whenever a creature you can see enters a space within 10 feet of the pack or ends its turn there, you can force that creature to make a Dexterity saving throw. On a failed save, the creature takes {@damage 3d10} Slashing damage. A creature makes this save only once per turn."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -3538,7 +3537,7 @@
 						"The damage increases by {@scaledamage 3d10|3-9|1d10} for each spell slot level above 3."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"slashing"
 			],
@@ -3588,7 +3587,7 @@
 			"entries": [
 				"You brandish the weapon used to cast the spell and conjure similar spectral weapons (or ammunition appropriate to the weapon) that launch forward and then disappear. Each creature of your choice that you can see in a 60-foot Cone makes a Dexterity saving throw, taking {@damage 5d8} Force damage on a failed save or half as much damage on a successful one."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -3596,7 +3595,7 @@
 						"The damage increases by {@scaledamage 5d8|3-9|1d8} for each spell slot level above 3."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"force"
 			],
@@ -3669,7 +3668,7 @@
 					]
 				}
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -3677,7 +3676,7 @@
 						"The healing and damage increase by {@scaledamage 6d12|7-9|1d12} for each spell slot level above 7."
 					]
 				}
-			],
+		,
 			"damageInflict": [
 				"radiant"
 			],
@@ -3730,7 +3729,7 @@
 				"You conjure a Large, intangible spirit from the Elemental Planes that appears in an unoccupied space within range. Choose the spirit's element, which determines its damage type: air (Lightning), earth (Thunder), fire (Fire), or water (Cold). The spirit lasts for the duration.",
 				"Whenever a creature you can see enters the spirit's space or starts its turn within 5 feet of the spirit, you can force that creature to make a Dexterity saving throw if the spirit has no creature {@condition Restrained|XPHB}. On failed save, the target takes {@damage 8d8} damage of the spirit's type, and the target has the {@condition Restrained|XPHB} condition until the spell ends. At the start of each of its turns, the {@condition Restrained|XPHB} target repeats the save. On a failed save, the target takes {@damage 4d8} damage of the spirit's type. On a successful save, the target isn't {@condition Restrained|XPHB} by the spirit."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -3738,7 +3737,7 @@
 						"The damage increases by {@scaledamage 8d8;4d8|5-9|2d8} for each spell slot level above 5."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"lightning",
 				"thunder",
@@ -3793,7 +3792,7 @@
 				"You conjure a Medium spirit from the Feywild in an unoccupied space you can see within range. The spirit lasts for the duration, and it looks like a Fey creature of your choice. When the spirit appears, you can make one melee spell attack against a creature within 5 feet of it. On a hit, the target takes Psychic damage equal to {@damage 3d12} plus your spellcasting ability modifier, and the target has the {@condition Frightened|XPHB} condition until the start of your next turn, with both you and the spirit as the source of the fear.",
 				"As a {@variantrule Bonus Action|XPHB} on your later turns, you can teleport the spirit to an unoccupied space you can see within 30 feet of the space it left and make the attack against a creature within 5 feet of it."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -3801,7 +3800,7 @@
 						"The damage increases by {@scaledamage 3d12|6-9|2d12} for each spell slot level above 6."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"psychic"
 			],
@@ -3851,7 +3850,7 @@
 				"You conjure spirits from the Elemental Planes that flit around you in a 15-foot Emanation for the duration. Until the spell ends, any attack you make deals an extra {@damage 2d8} damage when you hit a creature in the Emanation. This damage is Acid, Cold, Fire, or Lightning (your choice when you make the attack).",
 				"In addition, the ground in the Emanation is {@variantrule Difficult Terrain|XPHB} for your enemies."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -3859,7 +3858,7 @@
 						"The damage increases by {@scaledamage 2d8|4-9|2d8} for each spell slot level above 4."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"acid",
 				"cold",
@@ -3960,7 +3959,7 @@
 				"You conjure nature spirits that flit around you in a 10-foot Emanation for the duration. Whenever the Emanation enters the space of a creature you can see and whenever a creature you can see enters the Emanation or ends its turn there, you can force that creature to make a Wisdom saving throw. The creature takes {@damage 5d8} Force damage on a failed save or half as much damage on a successful one. A creature makes this save only once per turn.",
 				"In addition, you can take the {@action Disengage|XPHB} action as a {@variantrule Bonus Action|XPHB} for the spell's duration."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -3968,7 +3967,7 @@
 						"The damage increases by {@scaledamage 5d8|4-9|1d8} for each spell slot level above 4."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"force"
 			],
@@ -4429,7 +4428,7 @@
 				"You touch up to four nonmagical Arrows or Bolts and plant them in the ground in your space. Until the spell ends, the ammunition can't be physically uprooted, and whenever a creature other than you enters a space within 30 feet of the ammunition for the first time on a turn or ends its turn there, one piece of ammunition flies up to strike it. The creature must succeed on a Dexterity saving throw or take {@damage 2d4} Piercing damage. The piece of ammunition is then destroyed. The spell ends when none of the ammunition remains planted in the ground.",
 				"When you cast this spell, you can designate any creatures you choose, and the spell ignores them."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -4437,7 +4436,7 @@
 						"The amount of ammunition that can be affected increases by two for each spell slot level above 2."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"piercing"
 			],
@@ -4573,7 +4572,7 @@
 					]
 				}
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -4581,7 +4580,7 @@
 						"You create or destroy 10 additional gallons of water, or the size of the Cube increases by 5 feet, for each spell slot level above 1."
 					]
 				}
-			],
+			,
 			"miscTags": [
 				"PRM"
 			],
@@ -4627,7 +4626,7 @@
 				"As a {@variantrule Bonus Action|XPHB} on each of your turns, you can mentally command any creature you animated with this spell if the creature is within 120 feet of you (if you control multiple creatures, you can command any of them at the same time, issuing the same command to them). You decide what action the creature will take and where it will move on its next turn, or you can issue a general command, such as to guard a particular place. If you issue no commands, the creature takes the {@action Dodge|XPHB} action and moves only to avoid harm. Once given an order, the creature continues to follow the order until its task is complete.",
 				"The creature is under your control for 24 hours, after which it stops obeying any command you've given it. To maintain control of the creature for another 24 hours, you must cast this spell on the creature before the current 24-hour period ends. This use of the spell reasserts your control over up to three creatures you have animated with this spell rather than animating new ones."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -4635,7 +4634,7 @@
 						"If you use a level 7 spell slot, you can animate or reassert control over four {@creature Ghoul|XMM|Ghouls}. If you use a level 8 spell slot, you can animate or reassert control over five {@creature Ghoul|XMM|Ghouls} or two {@creature Ghast|XMM|Ghasts} or {@creature Wight|XMM|Wights}. If you use a level 9 spell slot, you can animate or reassert control over six {@creature Ghoul|XMM|Ghouls}, three {@creature Ghast|XMM|Ghasts} or {@creature Wight|XMM|Wights}, or two {@creature Mummy|XMM|Mummies}. See the {@book Monster Manual|XMM} for these stat blocks."
 					]
 				}
-			],
+			,
 			"affectsCreatureType": [
 				"humanoid"
 			],
@@ -4713,7 +4712,7 @@
 					]
 				}
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -4721,7 +4720,7 @@
 						"The Cube increases by 5 feet for each spell slot level above 5."
 					]
 				}
-			]
+			
 		},
 		{
 			"name": "Crown of Madness",
@@ -4853,7 +4852,7 @@
 			"entries": [
 				"A creature you touch regains a number of {@variantrule Hit Points|XPHB} equal to {@dice 2d8} plus your spellcasting ability modifier."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -4861,7 +4860,7 @@
 						"The healing increases by {@scaledice 2d8|1-9|2d8} for each spell slot level above 1."
 					]
 				}
-			],
+			,
 			"miscTags": [
 				"HL"
 			],
@@ -5128,7 +5127,7 @@
 				"If a creature touches the glowing bead before the spell ends, that creature makes a Dexterity saving throw. On a failed save, the spell ends, causing the bead to explode. On a successful save, the creature can throw the bead up to 40 feet. If the thrown bead enters a creature's space or collides with a solid object, the spell ends, and the bead explodes.",
 				"When the bead explodes, flammable objects in the explosion that aren't being worn or carried start {@hazard burning|XPHB}."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -5136,7 +5135,7 @@
 						"The base damage increases by {@scaledamage 12d6|7-9|1d6} for each spell slot level above 7."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"fire"
 			],
@@ -5553,7 +5552,7 @@
 				"A creature targeted by this spell makes a Dexterity saving throw. On a failed save, the target takes {@damage 10d6 + 40} Force damage. If this damage reduces it to 0 {@variantrule Hit Points|XPHB}, it and everything nonmagical it is wearing and carrying are disintegrated into gray dust. The target can be revived only by a {@spell True Resurrection|XPHB} or a {@spell Wish|XPHB} spell.",
 				"This spell automatically disintegrates a Large or smaller nonmagical object or a creation of magical force. If such a target is Huge or larger, this spell disintegrates a 10-foot-Cube portion of it."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -5561,7 +5560,7 @@
 						"The damage increases by {@scaledamage 10d6 + 40|6-9|3d6} for each spell slot level above 6."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"force"
 			],
@@ -5677,7 +5676,7 @@
 			"entries": [
 				"Choose one creature, object, or magical effect within range. Any ongoing spell of level 3 or lower on the target ends. For each ongoing spell of level 4 or higher on the target, make an ability check using your spellcasting ability (DC 10 plus that spell's level). On a successful check, the spell ends."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -5685,7 +5684,7 @@
 						"You automatically end a spell on the target if the spell's level is equal to or less than the level of the spell slot you use."
 					]
 				}
-			],
+			,
 			"miscTags": [
 				"OBJ"
 			],
@@ -5724,7 +5723,7 @@
 			"entries": [
 				"One creature of your choice that you can see within range hears a discordant melody in its mind. The target makes a Wisdom saving throw. On a failed save, it takes {@damage 3d6} Psychic damage and must immediately use its {@variantrule Reaction|XPHB}, if available, to move as far away from you as it can, using the safest route. On a successful save, the target takes half as much damage only."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -5732,7 +5731,7 @@
 						"The damage increases by {@scaledamage 3d6|1-9|1d6} for each spell slot level above 1."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"psychic"
 			],
@@ -5860,7 +5859,7 @@
 			"entries": [
 				"The target takes an extra {@damage 2d8} Radiant damage from the attack. The damage increases by {@dice 1d8} if the target is a Fiend or an Undead."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -5868,7 +5867,7 @@
 						"The damage increases by {@scaledamage 2d8|1-9|1d8} for each spell slot level above 1."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"radiant"
 			],
@@ -5989,7 +5988,7 @@
 				"You have a telepathic link with the {@condition Charmed|XPHB} target while the two of you are on the same plane of existence. On your turn, you can use this link to issue commands to the target (no action required), such as \"{@action Attack|XPHB} that creature,\" \"Move over there,\" or \"Fetch that object.\" The target does its best to obey on its turn. If it completes an order and doesn't receive further direction from you, it acts and moves as it likes, focusing on protecting itself.",
 				"You can command the target to take a {@variantrule Reaction|XPHB} but must take your own {@variantrule Reaction|XPHB} to do so."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -5997,7 +5996,7 @@
 						"Your {@status Concentration|XPHB} can last longer with a spell slot of level 5 (up to 10 minutes), 6 (up to 1 hour), or 7+ (up to 8 hours)."
 					]
 				}
-			],
+			,
 			"conditionInflict": [
 				"charmed"
 			],
@@ -6053,7 +6052,7 @@
 				"You have a telepathic link with the {@condition Charmed|XPHB} target while the two of you are on the same plane of existence. On your turn, you can use this link to issue commands to the target (no action required), such as \"{@action Attack|XPHB} that creature,\" \"Move over there,\" or \"Fetch that object.\" The target does its best to obey on its turn. If it completes an order and doesn't receive further direction from you, it acts and moves as it likes, focusing on protecting itself.",
 				"You can command the target to take a {@variantrule Reaction|XPHB} but must take your own {@variantrule Reaction|XPHB} to do so."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -6061,7 +6060,7 @@
 						"Your {@status Concentration|XPHB} can last longer with a level 9 spell slot (up to 8 hours)."
 					]
 				}
-			],
+			,
 			"conditionInflict": [
 				"charmed"
 			],
@@ -6114,7 +6113,7 @@
 				"You have a telepathic link with the {@condition Charmed|XPHB} target while the two of you are on the same plane of existence. On your turn, you can use this link to issue commands to the target (no action required), such as \"{@action Attack|XPHB} that creature,\" \"Move over there,\" or \"Fetch that object.\" The target does its best to obey on its turn. If it completes an order and doesn't receive further direction from you, it acts and moves as it likes, focusing on protecting itself.",
 				"You can command the target to take a {@variantrule Reaction|XPHB} but must take your own {@variantrule Reaction|XPHB} to do so."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -6122,7 +6121,7 @@
 						"Your {@status Concentration|XPHB} can last longer with a spell slot of level 6 (up to 10 minutes), 7 (up to 1 hour), or 8+ (up to 8 hours)."
 					]
 				}
-			],
+			,
 			"conditionInflict": [
 				"charmed"
 			],
@@ -6176,7 +6175,7 @@
 			"entries": [
 				"You touch one willing creature, and choose Acid, Cold, Fire, Lightning, or Poison. Until the spell ends, the target can take a {@action Magic|XPHB} action to exhale a 15-foot Cone. Each creature in that area makes a Dexterity saving throw, taking {@damage 3d6} damage of the chosen type on a failed save or half as much damage on a successful one."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -6184,7 +6183,7 @@
 						"The damage increases by {@scaledamage 3d6|2-9|1d6} for each spell slot level above 2."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"acid",
 				"cold",
@@ -6466,7 +6465,7 @@
 			"entries": [
 				"You hurl a beam of crackling energy. Make a ranged spell attack against one creature or object in range. On a hit, the target takes {@damage 1d10} Force damage."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Cantrip Upgrade",
@@ -6474,7 +6473,7 @@
 						"The spell creates two beams at level 5, three beams at level 11, and four beams at level 17. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"force"
 			],
@@ -6524,7 +6523,7 @@
 			"entries": [
 				"A nonmagical weapon you touch becomes a magic weapon. Choose one of the following damage types: Acid, Cold, Fire, Lightning, or Thunder. For the duration, the weapon has a +1 bonus to attack rolls and deals an extra {@damage 1d4} damage of the chosen type when it hits."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -6532,7 +6531,7 @@
 						"If you use a level 5-6 spell slot, the bonus to attack rolls increases to +2, and the extra damage increases to {@damage 2d4}. If you use a level 7+ spell slot, the bonus increases to +3, and the extra damage increases to {@damage 3d4}."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"acid",
 				"cold",
@@ -6655,7 +6654,7 @@
 			"entries": [
 				"You touch a creature and choose Strength, Dexterity, Intelligence, Wisdom, or Charisma. For the duration, the target has {@variantrule Advantage|XPHB} on ability checks using the chosen ability."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -6663,7 +6662,7 @@
 						"You can target one additional creature for each spell slot level above 2. You can choose a different ability for each target."
 					]
 				}
-			],
+			,
 			"miscTags": [
 				"ADV",
 				"SCT"
@@ -6774,7 +6773,7 @@
 				"As you hit the target, grasping vines appear on it, and it makes a Strength saving throw. A Large or larger creature has {@variantrule Advantage|XPHB} on this save. On a failed save, the target has the {@condition Restrained|XPHB} condition until the spell ends. On a successful save, the vines shrivel away, and the spell ends.",
 				"While {@condition Restrained|XPHB}, the target takes {@damage 1d6} Piercing damage at the start of each of its turns. The target or a creature within reach of it can take an action to make a Strength ({@skill Athletics}) check against your spell save DC. On a success, the spell ends."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -6782,7 +6781,7 @@
 						"The damage increases by {@scaledamage 1d6|1-9|1d6} for each spell slot level above 1."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"piercing"
 			],
@@ -6932,7 +6931,7 @@
 				"When the spell ends, you return to the plane you left in the spot that corresponds to your space in the Border Ethereal. If you appear in an occupied space, you are shunted to the nearest unoccupied space and take Force damage equal to twice the number of feet you are moved.",
 				"This spell ends instantly if you cast it while you are on the Ethereal Plane or a plane that doesn't border it, such as one of the Outer Planes."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -6940,7 +6939,7 @@
 						"You can target up to three willing creatures (including yourself) for each spell slot level above 7. The creatures must be within 10 feet of you when you cast the spell."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"force"
 			],
@@ -7241,7 +7240,7 @@
 			"entries": [
 				"You gain {@dice 2d4 + 4} {@variantrule Temporary Hit Points|XPHB}."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -7249,7 +7248,7 @@
 						"You gain 5 additional {@variantrule Temporary Hit Points|XPHB} for each spell slot level above 1."
 					]
 				}
-			],
+			,
 			"miscTags": [
 				"THP"
 			]
@@ -7531,7 +7530,7 @@
 					]
 				}
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -7539,7 +7538,7 @@
 						"Use the spell slot's level for the spell's level in the stat block."
 					]
 				}
-			],
+			,
 			"miscTags": [
 				"PRM",
 				"SMN"
@@ -7704,7 +7703,7 @@
 			"entries": [
 				"You hurl a mote of fire at a creature or an object within range. Make a ranged spell attack against the target. On a hit, the target takes {@damage 1d10} Fire damage. A flammable object hit by this spell starts {@hazard burning|XPHB} if it isn't being worn or carried."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Cantrip Upgrade",
@@ -7712,7 +7711,7 @@
 						"The damage increases by {@dice 1d10} when you reach levels 5 ({@damage 2d10}), 11 ({@damage 3d10}), and 17 ({@damage 4d10})."
 					]
 				}
-			],
+			,
 			"scalingLevelDice": {
 				"label": "fire damage",
 				"scaling": {
@@ -7866,7 +7865,7 @@
 				"A bright streak flashes from you to a point you choose within range and then blossoms with a low roar into a fiery explosion. Each creature in a 20-foot-radius Sphere centered on that point makes a Dexterity saving throw, taking {@damage 8d6} Fire damage on a failed save or half as much damage on a successful one.",
 				"Flammable objects in the area that aren't being worn or carried start {@hazard burning|XPHB}."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -7874,7 +7873,7 @@
 						"The damage increases by {@scaledamage 8d6|3-9|1d6} for each spell slot level above 3."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"fire"
 			],
@@ -7928,7 +7927,7 @@
 				"As a {@action Magic|XPHB} action, you can make a melee spell attack with the fiery blade. On a hit, the target takes Fire damage equal to {@damage 3d6} plus your spellcasting ability modifier.",
 				"The flaming blade sheds {@variantrule Bright Light|XPHB} in a 10-foot radius and {@variantrule Dim Light|XPHB} for an additional 10 feet."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -7936,7 +7935,7 @@
 						"The damage increases by {@scaledamage 3d6|2-9|1d6} for each spell slot level above 2."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"fire"
 			],
@@ -7984,7 +7983,7 @@
 			"entries": [
 				"A vertical column of brilliant fire roars down from above. Each creature in a 10-foot-radius, 40-foot-high Cylinder centered on a point within range makes a Dexterity saving throw, taking {@damage 5d6} Fire damage and {@damage 5d6} Radiant damage on a failed save or half as much damage on a successful one."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -7992,7 +7991,7 @@
 						"The Fire damage and the Radiant damage increase by {@scaledamage 5d6|5-9|1d6} for each spell slot level above 5."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"fire",
 				"radiant"
@@ -8044,7 +8043,7 @@
 				"As a {@variantrule Bonus Action|XPHB}, you can move the sphere up to 30 feet, rolling it along the ground. If you move the sphere into a creature's space, that creature makes the save against the sphere, and the sphere stops moving for the turn.",
 				"When you move the sphere, you can direct it over barriers up to 5 feet tall and jump it across pits up to 10 feet wide. Flammable objects that aren't being worn or carried start {@hazard burning|XPHB} if touched by the sphere, and it sheds {@variantrule Bright Light|XPHB} in a 20-foot radius and {@variantrule Dim Light|XPHB} for an additional 20 feet."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -8052,7 +8051,7 @@
 						"The damage increases by {@scaledamage 2d6|2-9|1d6} for each spell slot level above 2."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"fire"
 			],
@@ -8160,7 +8159,7 @@
 			"entries": [
 				"You touch a willing creature. For the duration, the target gains a {@variantrule Fly Speed|XPHB} of 60 feet and can hover. When the spell ends, the target falls if it is still aloft unless it can stop the fall."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -8168,7 +8167,7 @@
 						"You can target one additional creature for each spell slot level above 3."
 					]
 				}
-			],
+			,
 			"miscTags": [
 				"SCT"
 			],
@@ -8213,7 +8212,7 @@
 			"entries": [
 				"You create a 20-foot-radius Sphere of fog centered on a point within range. The Sphere is {@variantrule Heavily Obscured|XPHB}. It lasts for the duration or until a strong wind (such as one created by {@spell Gust of Wind|XPHB}) disperses it."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -8221,7 +8220,7 @@
 						"The fog's radius increases by 20 feet for each spell slot level above 1."
 					]
 				}
-			],
+			,
 			"miscTags": [
 				"OBS"
 			],
@@ -8479,7 +8478,7 @@
 				"You touch a willing creature. For the duration, the target's movement is unaffected by {@variantrule Difficult Terrain|XPHB}, and spells and other magical effects can neither reduce the target's {@variantrule Speed|XPHB} nor cause the target to have the {@condition Paralyzed|XPHB} or {@condition Restrained|XPHB} conditions. The target also has a {@variantrule Swim Speed|XPHB} equal to its {@variantrule Speed|XPHB}.",
 				"In addition, the target can spend 5 feet of movement to automatically escape from nonmagical restraints, such as manacles or a creature imposing the {@condition Grappled|XPHB} condition on it."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -8487,7 +8486,7 @@
 						"You can target one additional creature for each spell slot level above 4."
 					]
 				}
-			],
+			,
 			"conditionImmune": [
 				"paralyzed",
 				"restrained"
@@ -8588,7 +8587,7 @@
 				"While in this form, the target's only method of movement is a {@variantrule Fly Speed|XPHB} of 10 feet, and it can hover. The target can enter and occupy the space of another creature. The target has {@variantrule Resistance|XPHB} to Bludgeoning, Piercing, and Slashing damage; it has {@variantrule Immunity|XPHB} to the {@condition Prone|XPHB} condition; and it has {@variantrule Advantage|XPHB} on Strength, Dexterity, and Constitution saving throws. The target can pass through narrow openings, but it treats liquids as though they were solid surfaces.",
 				"The target can't talk or manipulate objects, and any objects it was carrying or holding can't be dropped, used, or otherwise interacted with. Finally, the target can't attack or cast spells."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -8596,7 +8595,7 @@
 						"You can target one additional creature for each spell slot level above 3."
 					]
 				}
-			],
+			,
 			"conditionImmune": [
 				"prone"
 			],
@@ -8697,7 +8696,7 @@
 				"You can issue any command you choose, short of an activity that would result in certain death. Should you issue a suicidal command, the spell ends.",
 				"A {@spell Remove Curse|XPHB}, {@spell Greater Restoration|XPHB}, or {@spell Wish|XPHB} spell ends this spell."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -8705,7 +8704,7 @@
 						"If you use a level 7 or 8 spell slot, the duration is 365 days. If you use a level 9 spell slot, the spell lasts until it is ended by one of the spells mentioned above."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"psychic"
 			],
@@ -8805,7 +8804,7 @@
 				"You summon a giant centipede, spider, or wasp (chosen when you cast the spell). It manifests in an unoccupied space you can see within range and uses the {@creature Giant Insect|XPHB} stat block. The form you choose determines certain details in its stat block. The creature disappears when it drops to 0 {@variantrule Hit Points|XPHB} or when the spell ends.",
 				"The creature is an ally to you and your allies. In combat, the creature shares your {@variantrule Initiative|XPHB} count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge|XPHB} action and uses its movement to avoid danger."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -8813,7 +8812,7 @@
 						"Use the spell slot's level for the spell's level in the stat block."
 					]
 				}
-			],
+			,
 			"miscTags": [
 				"SMN"
 			]
@@ -8892,7 +8891,7 @@
 				"An immobile, shimmering barrier appears in a 10-foot Emanation around you and remains for the duration.",
 				"Any spell of level 5 or lower cast from outside the barrier can't affect anything within it. Such a spell can target creatures and objects within the barrier, but the spell has no effect on them. Similarly, the area within the barrier is excluded from areas of effect created by such spells."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -8900,7 +8899,7 @@
 						"The barrier blocks spells of 1 level higher for each spell slot level above 6."
 					]
 				}
-			],
+			,
 			"areaTags": [
 				"S"
 			]
@@ -8970,7 +8969,7 @@
 					]
 				}
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -8978,7 +8977,7 @@
 						"The damage of an explosive rune increases by {@scaledamage 5d8|3-9|1d8} for each spell slot level above 3. If you create a spell glyph, you can store any spell of up to the same level as the spell slot you use for the Glyph of Warding."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"acid",
 				"cold",
@@ -9075,7 +9074,7 @@
 				"Make a melee spell attack against a creature within 30 feet of the vine. On a hit, the target takes {@damage 4d8} Bludgeoning damage and is pulled up to 30 feet toward the vine; if the target is Huge or smaller, it has the {@condition Grappled|XPHB} condition (escape DC equal to your spell save DC). The vine can grapple only one creature at a time, and you can cause the vine to release a {@condition Grappled|XPHB} creature (no action required).",
 				"As a {@variantrule Bonus Action|XPHB} on your later turns, you can repeat the attack against a creature within 30 feet of the vine."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -9083,7 +9082,7 @@
 						"The number of creatures the vine can grapple increases by one for each spell slot level above 4."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"bludgeoning"
 			],
@@ -9456,7 +9455,7 @@
 			"entries": [
 				"You hurl a bolt of light toward a creature within range. Make a ranged spell attack against the target. On a hit, it takes {@damage 4d6} Radiant damage, and the next attack roll made against it before the end of your next turn has {@variantrule Advantage|XPHB}."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -9464,7 +9463,7 @@
 						"The damage increases by {@scaledamage 4d6|1-9|1d6} for each spell slot level above 1."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"radiant"
 			],
@@ -9559,7 +9558,7 @@
 			"entries": [
 				"As you hit the creature, this spell creates a rain of thorns that sprouts from your Ranged weapon or ammunition. The target of the attack and each creature within 5 feet of it make a Dexterity saving throw, taking {@damage 1d10} Piercing damage on a failed save or half as much damage on a successful one."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -9567,7 +9566,7 @@
 						"The damage increases by {@scaledamage 1d10|1-9|1d10} for each spell slot level above 1."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"piercing"
 			],
@@ -9916,7 +9915,7 @@
 			"entries": [
 				"Choose a creature that you can see within range. Positive energy washes through the target, restoring 70 {@variantrule Hit Points|XPHB}. This spell also ends the {@condition Blinded|XPHB}, {@condition Deafened|XPHB}, and {@condition Poisoned|XPHB} conditions on the target."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -9924,7 +9923,7 @@
 						"The healing increases by 10 for each spell slot level above 6."
 					]
 				}
-			],
+			,
 			"miscTags": [
 				"HL",
 				"SGT"
@@ -9964,7 +9963,7 @@
 			"entries": [
 				"A creature of your choice that you can see within range regains {@variantrule Hit Points|XPHB} equal to {@dice 2d4} plus your spellcasting ability modifier."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -9972,7 +9971,7 @@
 						"The healing increases by {@scaledamage 2d4|1-9|2d4} for each spell slot level above 1."
 					]
 				}
-			],
+			,
 			"miscTags": [
 				"HL",
 				"SGT"
@@ -10020,7 +10019,7 @@
 				"Choose a manufactured metal object, such as a metal weapon or a suit of Heavy or Medium metal armor, that you can see within range. You cause the object to glow red-hot. Any creature in physical contact with the object takes {@damage 2d8} Fire damage when you cast the spell. Until the spell ends, you can take a {@variantrule Bonus Action|XPHB} on each of your later turns to deal this damage again if the object is within range.",
 				"If a creature is holding or wearing the object and takes the damage from it, the creature must succeed on a Constitution saving throw or drop the object if it can. If it doesn't drop the object, it has {@variantrule Disadvantage|XPHB} on attack rolls and ability checks until the start of your next turn."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -10028,7 +10027,7 @@
 						"The damage increases by {@scaledamage 2d8|2-9|1d8} for each spell slot level above 2."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"fire"
 			],
@@ -10077,7 +10076,7 @@
 			"entries": [
 				"The creature that damaged you is momentarily surrounded by green flames. It makes a Dexterity saving throw, taking {@damage 2d10} Fire damage on a failed save or half as much damage on a successful one."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -10085,7 +10084,7 @@
 						"The damage increases by {@scaledamage 2d10|1-9|1d10} for each spell slot level above 1."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"fire"
 			],
@@ -10190,7 +10189,7 @@
 			"entries": [
 				"A willing creature you touch is imbued with bravery. Until the spell ends, the creature is immune to the {@condition Frightened|XPHB} condition and gains {@variantrule Temporary Hit Points|XPHB} equal to your spellcasting ability modifier at the start of each of its turns."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -10198,7 +10197,7 @@
 						"You can target one additional creature for each spell slot level above 1."
 					]
 				}
-			],
+			,
 			"conditionImmune": [
 				"frightened"
 			],
@@ -10249,7 +10248,7 @@
 				"You place a curse on a creature that you can see within range. Until the spell ends, you deal an extra {@damage 1d6} Necrotic damage to the target whenever you hit it with an attack roll. Also, choose one ability when you cast the spell. The target has {@variantrule Disadvantage|XPHB} on ability checks made with the chosen ability.",
 				"If the target drops to 0 {@variantrule Hit Points|XPHB} before this spell ends, you can take a {@variantrule Bonus Action|XPHB} on a later turn to curse a new creature."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -10257,7 +10256,7 @@
 						"Your {@status Concentration|XPHB} can last longer with a spell slot of level 2 (up to 4 hours), 3-4 (up to 8 hours), or 5+ (24 hours)."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"necrotic"
 			],
@@ -10308,7 +10307,7 @@
 			"entries": [
 				"Choose a creature that you can see within range. The target must succeed on a Wisdom saving throw or have the {@condition Paralyzed|XPHB} condition for the duration. At the end of each of its turns, the target repeats the save, ending the spell on itself on a success."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -10316,7 +10315,7 @@
 						"You can target one additional creature for each spell slot level above 5."
 					]
 				}
-			],
+			,
 			"conditionInflict": [
 				"paralyzed"
 			],
@@ -10369,7 +10368,7 @@
 			"entries": [
 				"Choose a Humanoid that you can see within range. The target must succeed on a Wisdom saving throw or have the {@condition Paralyzed|XPHB} condition for the duration. At the end of each of its turns, the target repeats the save, ending the spell on itself on a success."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -10377,7 +10376,7 @@
 						"You can target one additional Humanoid for each spell slot level above 2."
 					]
 				}
-			],
+			,
 			"conditionInflict": [
 				"paralyzed"
 			],
@@ -10487,7 +10486,7 @@
 				"You open a gateway to the Far Realm, a region infested with unspeakable horrors. A 20-foot-radius Sphere of {@variantrule Darkness|XPHB} appears, centered on a point with range and lasting for the duration. The Sphere is {@variantrule Difficult Terrain|XPHB}, and it is filled with strange whispers and slurping noises, which can be heard up to 30 feet away. No light, magical or otherwise, can illuminate the area, and creatures fully within it have the {@condition Blinded|XPHB} condition.",
 				"Any creature that starts its turn in the area takes {@damage 2d6} Cold damage. Any creature that ends its turn there must succeed on a Dexterity saving throw or take {@damage 2d6} Acid damage from otherworldly tentacles."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -10495,7 +10494,7 @@
 						"The Cold or Acid damage (your choice) increases by {@scaledamage 2d6|3-9|1d6} for each spell slot level above 3."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"acid",
 				"cold"
@@ -10551,7 +10550,7 @@
 				"You magically mark one creature you can see within range as your quarry. Until the spell ends, you deal an extra {@damage 1d6} Force damage to the target whenever you hit it with an attack roll. You also have {@variantrule Advantage|XPHB} on any Wisdom ({@skill Perception} or {@skill Survival}) check you make to find it.",
 				"If the target drops to 0 {@variantrule Hit Points|XPHB} before this spell ends, you can take a {@variantrule Bonus Action|XPHB} to move the mark to a new creature you can see within range."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -10559,7 +10558,7 @@
 						"Your {@status Concentration|XPHB} can last longer with a spell slot of level 3-4 (up to 8 hours) or 5+ (up to 24 hours)."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"force"
 			],
@@ -10653,7 +10652,7 @@
 			"entries": [
 				"You create a shard of ice and fling it at one creature within range. Make a ranged spell attack against the target. On a hit, the target takes {@damage 1d10} Piercing damage. Hit or miss, the shard then explodes. The target and each creature within 5 feet of it must succeed on a Dexterity saving throw or take {@damage 2d6} Cold damage."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -10661,7 +10660,7 @@
 						"The Cold damage increases by {@scaledamage 2d6|1-9|1d6} for each spell slot level above 1."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"cold",
 				"piercing"
@@ -10711,7 +10710,7 @@
 				"Hail falls in a 20-foot-radius, 40-foot-high Cylinder centered on a point within range. Each creature in the Cylinder makes a Dexterity saving throw. A creature takes {@damage 2d10} Bludgeoning damage and {@damage 4d6} Cold damage on a failed save or half as much damage on a successful one.",
 				"Hailstones turn ground in the Cylinder into {@variantrule Difficult Terrain|XPHB} until the end of your next turn."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -10719,7 +10718,7 @@
 						"The Bludgeoning damage increases by {@scaledamage 2d8|4-9|1d10} for each spell slot level above 4."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"bludgeoning",
 				"cold"
@@ -11008,7 +11007,7 @@
 			"entries": [
 				"A creature you touch makes a Constitution saving throw, taking {@damage 2d10} Necrotic damage on a failed save or half as much damage on a successful one."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -11016,7 +11015,7 @@
 						"The damage increases by {@scaledamage 2d10|1-9|1d10} for each spell slot level above 1."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"necrotic"
 			],
@@ -11066,7 +11065,7 @@
 				"Swarming locusts fill a 20-foot-radius Sphere centered on a point you choose within range. The Sphere remains for the duration, and its area is {@variantrule Lightly Obscured|XPHB} and {@variantrule Difficult Terrain|XPHB}.",
 				"When the swarm appears, each creature in it makes a Constitution saving throw, taking {@damage 4d10} Piercing damage on a failed save or half as much damage on a successful one. A creature also makes this save when it enters the spell's area for the first time on a turn or ends its turn there. A creature makes this save only once per turn."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -11074,7 +11073,7 @@
 						"The damage increases by {@scaledamage 4d10|5-9|1d10} for each spell slot level above 5."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"piercing"
 			],
@@ -11126,7 +11125,7 @@
 			"entries": [
 				"A creature you touch has the {@condition Invisible|XPHB} condition until the spell ends. The spell ends early immediately after the target makes an attack roll, deals damage, or casts a spell."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -11134,7 +11133,7 @@
 						"You can target one additional creature for each spell slot level above 2."
 					]
 				}
-			],
+			,
 			"conditionInflict": [
 				"invisible"
 			],
@@ -11183,7 +11182,7 @@
 				"You unleash a storm of flashing light and raging thunder in a 10-foot-radius, 40-foot-high Cylinder centered on a point you can see within range. While in this area, creatures have the {@condition Blinded|XPHB} and {@condition Deafened|XPHB} conditions, and they can't cast spells with a Verbal component.",
 				"When the storm appears, each creature in it makes a Constitution saving throw, taking {@damage 2d10} Radiant damage and {@damage 2d10} Thunder damage on a failed save or half as much damage on a successful one. A creature also makes this save when it enters the spell's area for the first time on a turn or ends its turn there. A creature makes this save only once per turn."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -11191,7 +11190,7 @@
 						"The Radiant and Thunder damage increase by {@scaledamage 2d10|5-9|1d10} for each spell slot level above 5."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"radiant",
 				"thunder"
@@ -11247,7 +11246,7 @@
 			"entries": [
 				"You touch a willing creature. Once on each of its turns until the spell ends, that creature can jump up to 30 feet by spending 10 feet of movement."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -11255,7 +11254,7 @@
 						"You can target one additional creature for each spell slot level above 1."
 					]
 				}
-			],
+			,
 			"miscTags": [
 				"SCT"
 			],
@@ -11598,7 +11597,7 @@
 				"As your attack hits or misses the target, the weapon or ammunition you're using transforms into a lightning bolt. Instead of taking any damage or other effects from the attack, the target takes {@damage 4d8} Lightning damage on a hit or half as much damage on a miss. Each creature within 10 feet of the target then makes a Dexterity saving throw, taking {@damage 2d8} Lightning damage on a failed save or half as much damage on a successful one.",
 				"The weapon or ammunition then returns to its normal form."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -11606,7 +11605,7 @@
 						"The damage for both effects of the spell increases by {@scaledamage 4d8;2d8|3-9|1d8} for each spell slot level above 3."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"lightning"
 			],
@@ -11650,7 +11649,7 @@
 			"entries": [
 				"A stroke of lightning forming a 100-foot-long, 5-foot-wide Line blasts out from you in a direction you choose. Each creature in the Line makes a Dexterity saving throw, taking {@damage 8d6} Lightning damage on a failed save or half as much damage on a successful one."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -11658,7 +11657,7 @@
 						"The damage increases by {@scaledamage 8d6|3-9|1d6} for each spell slot level above 3."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"lightning"
 			],
@@ -11831,7 +11830,7 @@
 			"entries": [
 				"You touch a creature. The target's {@variantrule Speed|XPHB} increases by 10 feet until the spell ends."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -11839,7 +11838,7 @@
 						"You can target one additional creature for each spell slot level above 1."
 					]
 				}
-			],
+			,
 			"miscTags": [
 				"SCT"
 			],
@@ -11985,7 +11984,7 @@
 				},
 				"Each time you cast this spell, you can cause its magic to operate in the reverse direction, preventing a creature of the specified type from leaving the Cylinder and protecting targets outside it."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -11993,7 +11992,7 @@
 						"The duration increases by 1 hour for each spell slot level above 3."
 					]
 				}
-			],
+			,
 			"savingThrow": [
 				"charisma"
 			],
@@ -12097,7 +12096,7 @@
 			"entries": [
 				"You create three glowing darts of magical force. Each dart strikes a creature of your choice that you can see within range. A dart deals {@damage 1d4 + 1} Force damage to its target. The darts all strike simultaneously, and you can direct them to hit one creature or several."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -12105,7 +12104,7 @@
 						"The spell creates one more dart for each spell slot level above 1."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"force"
 			],
@@ -12203,7 +12202,7 @@
 			"entries": [
 				"You touch a nonmagical weapon. Until the spell ends, that weapon becomes a magic weapon with a +1 bonus to attack rolls and damage rolls. The spell ends early if you cast it again."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -12211,7 +12210,7 @@
 						"The bonus increases to +2 with a level 3-5 spell slot. The bonus increases to +3 with a level 6+ spell slot."
 					]
 				}
-			]
+			
 		},
 		{
 			"name": "Major Image",
@@ -12253,7 +12252,7 @@
 				"If you are within range of the illusion, you can take a {@action Magic|XPHB} action to cause the image to move to any other spot within range. As the image changes location, you can alter its appearance so that its movements appear natural for the image. For example, if you create an image of a creature and move it, you can alter the image so that it appears to be walking. Similarly, you can cause the illusion to make different sounds at different times, even making it carry on a conversation, for example.",
 				"Physical interaction with the image reveals it to be an illusion, for things can pass through it. A creature that takes a {@action Study|XPHB} action to examine the image can determine that it is an illusion with a successful Intelligence ({@skill Investigation}) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and its other sensory qualities become faint to the creature."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -12261,7 +12260,7 @@
 						"The spell lasts until dispelled, without requiring {@status Concentration|XPHB}, if cast with a level 4+ spell slot."
 					]
 				}
-			],
+			,
 			"abilityCheck": [
 				"intelligence"
 			],
@@ -12302,7 +12301,7 @@
 			"entries": [
 				"A wave of healing energy washes out from a point you can see within range. Choose up to six creatures in a 30-foot-radius Sphere centered on that point. Each target regains {@variantrule Hit Points|XPHB} equal to {@dice 5d8} plus your spellcasting ability modifier."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -12310,7 +12309,7 @@
 						"The healing increases by {@scaledice 5d8|5-9|1d8} for each spell slot level above 5."
 					]
 				}
-			],
+			,
 			"miscTags": [
 				"HL"
 			],
@@ -12390,7 +12389,7 @@
 			"entries": [
 				"Up to six creatures of your choice that you can see within range regain {@variantrule Hit Points|XPHB} equal to {@dice 2d4} plus your spellcasting ability modifier."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -12398,7 +12397,7 @@
 						"The healing increases by {@scaledice 2d4|3-9|1d4} for each spell slot level above 3."
 					]
 				}
-			],
+			,
 			"miscTags": [
 				"HL",
 				"SGT"
@@ -12444,7 +12443,7 @@
 				"You suggest a course of activity\u2014described in no more than 25 words\u2014to twelve or fewer creatures you can see within range that can hear and understand you. The suggestion must sound achievable and not involve anything that would obviously deal damage to any of the targets or their allies. For example, you could say, \"Walk to the village down that road, and help the villagers there harvest crops until sunset.\" Or you could say, \"Now is not the time for violence. Drop your weapons, and dance! Stop in an hour.\"",
 				"Each target must succeed on a Wisdom saving throw or have the {@condition Charmed|XPHB} condition for the duration or until you or your allies deal damage to the target. Each {@condition Charmed|XPHB} target pursues the suggestion to the best of its ability. The suggested activity can continue for the entire duration, but if the suggested activity can be completed in a shorter time, the spell ends for a target upon completing it."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -12452,7 +12451,7 @@
 						"The duration is longer with a spell slot of level 7 (10 days), 8 (30 days), or 9 (366 days)."
 					]
 				}
-			],
+			,
 			"conditionInflict": [
 				"charmed"
 			],
@@ -12592,7 +12591,7 @@
 			"entries": [
 				"A shimmering green arrow streaks toward a target within range and bursts in a spray of acid. Make a ranged spell attack against the target. On a hit, the target takes {@damage 4d4} Acid damage and {@damage 2d4} Acid damage at the end of its next turn. On a miss, the arrow splashes the target with acid for half as much of the initial damage only."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -12600,7 +12599,7 @@
 						"The damage (both initial and later) increases by {@scaledamage 4d4;2d4|2-9|1d4} for each spell slot level above 2."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"acid"
 			],
@@ -12813,7 +12812,7 @@
 			"entries": [
 				"You try to temporarily sliver the mind of one creature you can see within range. The target must succeed on an Intelligence saving throw or take {@damage 1d6} Psychic damage and subtract {@dice 1d4} from the next saving throw it makes before the end of your next turn."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Cantrip Upgrade",
@@ -12821,7 +12820,7 @@
 						"The damage increases by {@dice 1d6} when you reach levels 5 ({@damage 2d6}), 11 ({@damage 3d6}), and 17 ({@damage 4d6})."
 					]
 				}
-			],
+			,
 			"scalingLevelDice": {
 				"label": "Psychic damage",
 				"scaling": {
@@ -12880,7 +12879,7 @@
 			"entries": [
 				"You drive a spike of psionic energy into the mind of one creature you can see within range. The target makes a Wisdom saving throw, taking {@damage 3d8} Psychic damage on a failed save or half as much damage on a successful one. On a failed save, you also always know the target's location until the spell ends, but only while the two of you are on the same plane of existence. While you have this knowledge, the target can't become hidden from you, and if it has the {@condition Invisible|XPHB} condition, it gains no benefit from that condition against you."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -12888,7 +12887,7 @@
 						"The damage increases by {@scaledamage 3d8|2-9|1d8} for each spell slot level above 2."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"psychic"
 			],
@@ -13154,7 +13153,7 @@
 				"A modified memory doesn't necessarily affect how a creature behaves, particularly if the memory contradicts the creature's natural inclinations, alignment, or beliefs. An illogical modified memory, such as a false memory of how much the creature enjoyed swimming in acid, is dismissed as a bad dream. The DM might deem a modified memory too nonsensical to affect a creature.",
 				"A {@spell Remove Curse|XPHB} or {@spell Greater Restoration|XPHB} spell cast on the target restores the creature's true memory."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -13162,7 +13161,7 @@
 						"You can alter the target's memories of an event that took place up to 7 days ago (level 6 spell slot), 30 days ago (level 7 spell slot), 365 days ago (level 8 spell slot), or any time in the creature's past (level 9 spell slot)."
 					]
 				}
-			],
+			,
 			"conditionInflict": [
 				"charmed",
 				"incapacitated"
@@ -13217,7 +13216,7 @@
 				"A silvery beam of pale light shines down in a 5-foot-radius, 40-foot-high Cylinder centered on a point within range. Until the spell ends, {@variantrule Dim Light|XPHB} fills the Cylinder, and you can take a {@action Magic|XPHB} action on later turns to move the Cylinder up to 60 feet.",
 				"When the Cylinder appears, each creature in it makes a Constitution saving throw. On a failed save, a creature takes {@damage 2d10} Radiant damage, and if the creature is shape-shifted (as a result of the {@spell Polymorph|XPHB} spell, for example), it reverts to its true form and can't shape-shift until it leaves the Cylinder. On a successful save, a creature takes half as much damage only. A creature also makes this save when the spell's area moves into its space and when it enters the spell's area or ends its turn there. A creature makes this save only once per turn."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -13225,7 +13224,7 @@
 						"The damage increases by {@scaledamage 2d10|2-9|1d10} for each spell slot level above 2."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"radiant"
 			],
@@ -13388,7 +13387,7 @@
 				},
 				"Casting this spell on the same spot every day for 365 days makes the spell last until dispelled."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -13396,7 +13395,7 @@
 						"You can increase the size of the Cube by 100 feet for each spell slot level above 4."
 					]
 				}
-			],
+			,
 			"miscTags": [
 				"PIR",
 				"PRM"
@@ -13648,7 +13647,7 @@
 				"If the globe strikes a body of water, it freezes the water to a depth of 6 inches over an area 30 feet square. This ice lasts for 1 minute. Creatures that were swimming on the surface of frozen water are trapped in the ice and have the {@condition Restrained|XPHB} condition. A trapped creature can take an action to make a Strength ({@skill Athletics}) check against your spell save DC to break free.",
 				"You can refrain from firing the globe after completing the spell's casting. If you do so, a globe about the size of a sling bullet, cool to the touch, appears in your hand. At any time, you or a creature you give the globe to can throw the globe (to a range of 40 feet) or hurl it with a sling (to the sling's normal range). It shatters on impact, with the same effect as a normal casting of the spell. You can also set the globe down without shattering it. After 1 minute, if the globe hasn't already shattered, it explodes."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -13656,7 +13655,7 @@
 						"The damage increases by {@scaledamage 10d6|6-9|1d6} for each spell slot level above 6."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"cold"
 			],
@@ -13962,7 +13961,7 @@
 				"You tap into the nightmares of a creature you can see within range and create an illusion of its deepest fears, visible only to that creature. The target makes a Wisdom saving throw. On a failed save, the target takes {@damage 4d10} Psychic damage and has {@variantrule Disadvantage|XPHB} on ability checks and attack rolls for the duration. On a successful save, the target takes half as much damage, and the spell ends.",
 				"For the duration, the target makes a Wisdom saving throw at the end of each of its turns. On a failed save, it takes the Psychic damage again. On a successful save, the spell ends."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -13970,7 +13969,7 @@
 						"The damage increases by {@scaledamage 4d10|4-9|1d10} for each spell slot level above 4."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"psychic"
 			],
@@ -14111,7 +14110,7 @@
 				"You attempt to bind a Celestial, an Elemental, a Fey, or a Fiend to your service. The creature must be within range for the entire casting of the spell. (Typically, the creature is first summoned into the center of the inverted version of the {@spell Magic Circle|XPHB} spell to trap it while this spell is cast.) At the completion of the casting, the target must succeed on a Charisma saving throw or be bound to serve you for the duration. If the creature was summoned or created by another spell, that spell's duration is extended to match the duration of this spell.",
 				"A bound creature must follow your commands to the best of its ability. You might command the creature to accompany you on an adventure, to guard a location, or to deliver a message. If the creature is Hostile, it strives to twist your commands to achieve its own objectives. If the creature carries out your commands completely before the spell ends, it travels to you to report this fact if you are on the same plane of existence. If you are on a different plane, it returns to the place where you bound it and remains there until the spell ends."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -14119,7 +14118,7 @@
 						"The duration increases with a spell slot of level 6 (10 days), 7 (30 days), 8 (180 days), and 9 (366 days)."
 					]
 				}
-			],
+			,
 			"savingThrow": [
 				"charisma"
 			],
@@ -14271,7 +14270,7 @@
 			"entries": [
 				"You spray toxic mist at a creature within range. Make a ranged spell attack against the target. On a hit, the target takes {@damage 1d12} Poison damage."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Cantrip Upgrade",
@@ -14279,7 +14278,7 @@
 						"The damage increases by {@dice 1d12} when you reach levels 5 ({@damage 2d12}), 11 ({@damage 3d12}), and 17 ({@damage 4d12})."
 					]
 				}
-			],
+			,
 			"scalingLevelDice": {
 				"label": "Poison damage",
 				"scaling": {
@@ -14547,7 +14546,7 @@
 			"entries": [
 				"Up to five creatures of your choice who remain within range for the spell's entire casting gain the benefits of a {@variantrule Short Rest|XPHB} and also regain {@dice 2d8} {@variantrule Hit Points|XPHB}. A creature can't be affected by this spell again until that creature finishes a {@variantrule Long Rest|XPHB}."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -14555,7 +14554,7 @@
 						"The healing increases by {@scaledice 2d8|2-9|1d8} for each spell slot level above 2."
 					]
 				}
-			],
+			,
 			"miscTags": [
 				"HL"
 			],
@@ -14890,7 +14889,7 @@
 				"A flickering flame appears in your hand and remains there for the duration. While there, the flame emits no heat and ignites nothing, and it sheds {@variantrule Bright Light|XPHB} in a 20-foot radius and {@variantrule Dim Light|XPHB} for an additional 20 feet. The spell ends if you cast it again.",
 				"Until the spell ends, you can take a {@action Magic|XPHB} action to hurl fire at a creature or an object within 60 feet of you. Make a ranged spell attack. On a hit, the target takes {@damage 1d8} Fire damage."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Cantrip Upgrade",
@@ -14898,7 +14897,7 @@
 						"The damage increases by {@dice 1d8} when you reach levels 5 ({@damage 2d8}), 11 ({@damage 3d8}), and 17 ({@damage 4d8})."
 					]
 				}
-			],
+			,
 			"scalingLevelDice": {
 				"label": "fire damage",
 				"scaling": {
@@ -15388,7 +15387,7 @@
 			"entries": [
 				"A frigid beam of blue-white light streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, it takes {@damage 1d8} Cold damage, and its {@variantrule Speed|XPHB} is reduced by 10 feet until the start of your next turn."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Cantrip Upgrade",
@@ -15396,7 +15395,7 @@
 						"The damage increases by {@dice 1d8} when you reach levels 5 ({@damage 2d8}), 11 ({@damage 3d8}), and 17 ({@damage 4d8})."
 					]
 				}
-			],
+			,
 			"scalingLevelDice": {
 				"label": "Cold damage",
 				"scaling": {
@@ -15451,7 +15450,7 @@
 			"entries": [
 				"You shoot a greenish ray at a creature within range. Make a ranged spell attack against the target. On a hit, the target takes {@damage 2d8} Poison damage and has the {@condition Poisoned|XPHB} condition until the end of your next turn."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -15459,7 +15458,7 @@
 						"The damage increases by {@scaledamage 2d8|1-9|1d8} for each spell slot level above 1."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"poison"
 			],
@@ -15911,7 +15910,7 @@
 			"entries": [
 				"Flame-like radiance descends on a creature that you can see within range. The target must succeed on a Dexterity saving throw or take {@damage 1d8} Radiant damage. The target gains no benefit from Half {@variantrule Cover|XPHB} or Three-Quarters {@variantrule Cover|XPHB} for this save."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Cantrip Upgrade",
@@ -15919,7 +15918,7 @@
 						"The damage increases by {@dice 1d8} when you reach levels 5 ({@damage 2d8}), 11 ({@damage 3d8}), and 17 ({@damage 4d8})."
 					]
 				}
-			],
+			,
 			"scalingLevelDice": {
 				"label": "Radiant damage",
 				"scaling": {
@@ -16020,7 +16019,7 @@
 			"entries": [
 				"You hurl three fiery rays. You can hurl them at one target within range or at several. Make a ranged spell attack for each ray. On a hit, the target takes {@damage 2d6} Fire damage."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -16028,7 +16027,7 @@
 						"You create one additional ray for each spell slot level above 2."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"fire"
 			],
@@ -16173,7 +16172,7 @@
 			"entries": [
 				"As you hit the target, it takes an extra {@damage 1d6} Fire damage from the attack. At the start of each of its turns until the spell ends, the target takes {@damage 1d6} Fire damage and then makes a Constitution saving throw. On a failed save, the spell continues. On a successful save, the spell ends."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -16181,7 +16180,7 @@
 						"All the damage increases by {@scaledamage 1d6|1-9|1d6} for each spell slot level above 1."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"fire"
 			],
@@ -16450,7 +16449,7 @@
 				"A loud noise erupts from a point of your choice within range. Each creature in a 10-foot-radius Sphere centered there makes a Constitution saving throw, taking {@damage 3d8} Thunder damage on a failed save or half as much damage on a successful one. A Construct has {@variantrule Disadvantage|XPHB} on the save.",
 				"A nonmagical object that isn't being worn or carried also takes the damage if it's in the spell's area."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -16458,7 +16457,7 @@
 						"The damage increases by {@scaledamage 3d8|2-9|1d8} for each spell slot level above 2."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"thunder"
 			],
@@ -16594,7 +16593,7 @@
 				"A Club or Quarterstaff you are holding is imbued with nature's power. For the duration, you can use your spellcasting ability instead of Strength for the attack and damage rolls of melee attacks using that weapon, and the weapon's damage die becomes a {@dice d8}. If the attack deals damage, it can be Force damage or the weapon's normal damage type (your choice).",
 				"The spell ends early if you cast it again or if you let go of the weapon."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Cantrip Upgrade",
@@ -16602,7 +16601,7 @@
 						"The damage die changes when you reach levels 5 ({@damage d10}), 11 ({@damage d12}), and 17 ({@damage 2d6})."
 					]
 				}
-			],
+			,
 			"scalingLevelDice": {
 				"label": "damage",
 				"scaling": {
@@ -16653,7 +16652,7 @@
 			"entries": [
 				"The target hit by the strike takes an extra {@damage 2d6} Radiant damage from the attack. Until the spell ends, the target sheds {@variantrule Bright Light|XPHB} in a 5-foot radius, attack rolls against it have {@variantrule Advantage|XPHB}, and it can't benefit from the {@condition Invisible|XPHB} condition."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -16661,7 +16660,7 @@
 						"The damage increases by {@scaledamage 2d6|2-9|1d6} for each spell slot level above 2."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"radiant"
 			],
@@ -16705,7 +16704,7 @@
 			"entries": [
 				"Lightning springs from you to a creature that you try to touch. Make a melee spell attack against the target. On a hit, the target takes {@damage 1d8} Lightning damage, and it can't make Opportunity Attacks until the start of its next turn."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Cantrip Upgrade",
@@ -16713,7 +16712,7 @@
 						"The damage increases by {@dice 1d8} when you reach levels 5 ({@damage 2d8}), 11 ({@damage 3d8}), and 17 ({@damage 4d8})."
 					]
 				}
-			],
+			,
 			"scalingLevelDice": {
 				"label": "Lightning damage",
 				"scaling": {
@@ -17071,7 +17070,7 @@
 				"You cast sorcerous energy at one creature or object within range. Make a ranged attack roll against the target. On a hit, the target takes {@damage 1d8} damage of a type you choose: Acid, Cold, Fire, Lightning, Poison, Psychic, or Thunder.",
 				"If you roll an 8 on a {@dice d8} for this spell, you can roll another {@dice d8}, and add it to the damage. When you cast this spell, the maximum number of these d8s you can add to the spell's damage equals your spellcasting ability modifier."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Cantrip Upgrade",
@@ -17079,7 +17078,7 @@
 						"The damage increases by {@dice 1d8} when you reach levels 5 ({@damage 2d8}), 11 ({@damage 3d8}), and 17 ({@damage 4d8})."
 					]
 				}
-			],
+			,
 			"scalingLevelDice": {
 				"label": "damage",
 				"scaling": {
@@ -17141,7 +17140,7 @@
 			"entries": [
 				"Choose a creature within range that has 0 {@variantrule Hit Points|XPHB} and isn't dead. The creature becomes {@variantrule Stable|XPHB}."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Cantrip Upgrade",
@@ -17149,7 +17148,7 @@
 						"The range doubles when you reach levels 5 (30 feet), 11 (60 feet), and 17 (120 feet)."
 					]
 				}
-			],
+			,
 			"miscTags": [
 				"SCL"
 			],
@@ -17334,7 +17333,7 @@
 			"entries": [
 				"Until the spell ends, one willing creature you touch gains the ability to move up, down, and across vertical surfaces and along ceilings, while leaving its hands free. The target also gains a {@variantrule Climb Speed|XPHB} equal to its {@variantrule Speed|XPHB}."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -17342,7 +17341,7 @@
 						"You can target one additional creature for each spell slot level about 2."
 					]
 				}
-			],
+			,
 			"miscTags": [
 				"SCT"
 			]
@@ -17438,7 +17437,7 @@
 				"Protective spirits flit around you in a 15-foot Emanation for the duration. If you are good or neutral, their spectral form appears angelic or fey (your choice). If you are evil, they appear fiendish.",
 				"When you cast this spell, you can designate creatures to be unaffected by it. Any other creature's {@variantrule Speed|XPHB} is halved in the Emanation, and whenever the Emanation enters a creature's space and whenever a creature enters the Emanation or ends its turn there, the creature must make a Wisdom saving throw. On a failed save, the creature takes {@damage 3d8} Radiant damage (if you are good or neutral) or {@damage 3d8} Necrotic damage (if you are evil). On a successful save, the creature takes half as much damage. A creature makes this save only once per turn."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -17446,7 +17445,7 @@
 						"The damage increases by {@scaledamage 3d8|3-9|1d8} for each spell slot level above 3."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"necrotic",
 				"radiant"
@@ -17496,7 +17495,7 @@
 				"You create a floating, spectral force that resembles a weapon of your choice and lasts for the duration. The force appears within range in a space of your choice, and you can immediately make one melee spell attack against one creature within 5 feet of the force. On a hit, the target takes Force damage equal to {@damage 1d8} plus your spellcasting ability modifier.",
 				"As a {@variantrule Bonus Action|XPHB} on your later turns, you can move the force up to 20 feet and repeat the attack against a creature within 5 feet of it."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -17504,7 +17503,7 @@
 						"The damage increases by {@scaledamage 1d8|2-9|1d8} for every slot level above 2."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"force"
 			],
@@ -17549,7 +17548,7 @@
 			"entries": [
 				"The target takes an extra {@damage 4d6} Psychic damage from the attack, and the target must succeed on a Wisdom saving throw or have the {@condition Stunned|XPHB} condition until the end of your next turn."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -17557,7 +17556,7 @@
 						"The extra damage increases by {@scaledamage 4d6|4-9|1d6} for each spell slot level above 4."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"psychic"
 			],
@@ -17603,7 +17602,7 @@
 			"entries": [
 				"You launch a mote of light at one creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes {@damage 1d8} Radiant damage, and until the end of your next turn, it emits {@variantrule Dim Light|XPHB} in a 10-foot radius and can't benefit from the {@condition Invisible|XPHB} condition."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Cantrip Upgrade",
@@ -17611,7 +17610,7 @@
 						"The damage increases by {@dice 1d8} when you reach levels 5 ({@damage 2d8}), 11 ({@damage 3d8}), and 17 ({@damage 4d8})."
 					]
 				}
-			],
+			,
 			"scalingLevelDice": {
 				"label": "Radiant damage",
 				"scaling": {
@@ -18001,7 +18000,7 @@
 				"You call forth an aberrant spirit. It manifests in an unoccupied space that you can see within range and uses the {@creature Aberrant Spirit|XPHB} stat block. When you cast the spell, choose Beholderkin, Mind Flayer, or Slaad. The creature resembles an Aberration of that kind, which determines certain details in its stat block. The creature disappears when it drops to 0 {@variantrule Hit Points|XPHB} or when the spell ends.",
 				"The creature is an ally to you and your allies. In combat, it shares your {@variantrule Initiative|XPHB} count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge|XPHB} action and uses its movement to avoid danger."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -18009,7 +18008,7 @@
 						"Use the spell slot's level for the spell's level in the stat block."
 					]
 				}
-			],
+			,
 			"miscTags": [
 				"SGT",
 				"SMN"
@@ -18057,7 +18056,7 @@
 				"You call forth a bestial spirit. It manifests in an unoccupied space that you can see within range and uses the {@creature Bestial Spirit|XPHB} stat block. When you cast the spell, choose an environment: Air, Land, or Water. The creature resembles an animal of your choice that is native to the chosen environment, which determines certain details in its stat block. The creature disappears when it drops to 0 {@variantrule Hit Points|XPHB} or when the spell ends.",
 				"The creature is an ally to you and your allies. In combat, the creature shares your {@variantrule Initiative|XPHB} count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge|XPHB} action and uses its movement to avoid danger."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -18065,7 +18064,7 @@
 						"Use the spell slot's level for the spell's level in the stat block."
 					]
 				}
-			],
+			,
 			"miscTags": [
 				"SGT",
 				"SMN"
@@ -18112,7 +18111,7 @@
 				"You call forth a Celestial spirit. It manifests in an angelic form in an unoccupied space that you can see within range and uses the {@creature Celestial Spirit|XPHB} stat block. When you cast the spell, choose Avenger or {@item Defender}. Your choice determines certain details in its stat block. The creature disappears when it drops to 0 {@variantrule Hit Points|XPHB} or when the spell ends.",
 				"The creature is an ally to you and your allies. In combat, the creature shares your {@variantrule Initiative|XPHB} count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge|XPHB} action and uses its movement to avoid danger."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -18120,7 +18119,7 @@
 						"Use the spell slot's level for the spell's level in the stat block."
 					]
 				}
-			],
+			,
 			"miscTags": [
 				"SGT",
 				"SMN"
@@ -18168,7 +18167,7 @@
 				"You call forth the spirit of a Construct. It manifests in an unoccupied space that you can see within range and uses the {@creature Construct Spirit|XPHB} stat block. When you cast the spell, choose a material: Clay, Metal, or Stone. The creature resembles an animate statue (you determine the appearance) made of the chosen material, which determines certain details in its stat block. The creature disappears when it drops to 0 {@variantrule Hit Points|XPHB} or when the spell ends.",
 				"The creature is an ally to you and your allies. In combat, the creature shares your {@variantrule Initiative|XPHB} count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge|XPHB} action and uses its movement to avoid danger."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -18176,7 +18175,7 @@
 						"Use the spell slot's level for the spell's level in the stat block."
 					]
 				}
-			],
+			,
 			"miscTags": [
 				"SGT",
 				"SMN"
@@ -18225,7 +18224,7 @@
 				"You call forth a Dragon spirit. It manifests in an unoccupied space that you can see within range and uses the {@creature Draconic Spirit|XPHB} stat block. The creature disappears when it drops to 0 {@variantrule Hit Points|XPHB} or when the spell ends.",
 				"The creature is an ally to you and your allies. In combat, the creature shares your {@variantrule Initiative|XPHB} count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge|XPHB} action and uses its movement to avoid danger."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -18233,7 +18232,7 @@
 						"Use the spell slot's level for the spell's level in the stat block."
 					]
 				}
-			],
+			,
 			"miscTags": [
 				"SGT",
 				"SMN"
@@ -18281,7 +18280,7 @@
 				"You call forth an Elemental spirit. It manifests in an unoccupied space that you can see within range and uses the {@creature Elemental Spirit|XPHB} stat block. When you cast the spell, choose an element: Air, Earth, Fire, or Water. The creature resembles a bipedal form wreathed in the chosen element, which determines certain details in its stat block. The creature disappears when it drops to 0 {@variantrule Hit Points|XPHB} or when the spell ends.",
 				"The creature is an ally to you and your allies. In combat, the creature shares your {@variantrule Initiative|XPHB} count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge|XPHB} action and uses its movement to avoid danger."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -18289,7 +18288,7 @@
 						"Use the spell slot's level for the spell's level in the stat block."
 					]
 				}
-			],
+			,
 			"miscTags": [
 				"SGT",
 				"SMN"
@@ -18336,7 +18335,7 @@
 				"You call forth a Fey spirit. It manifests in an unoccupied space that you can see within range and uses the {@creature Fey Spirit|XPHB} stat block. When you cast the spell, choose a mood: Fuming, Mirthful, or Tricksy. The creature resembles a Fey creature of your choice marked by the chosen mood, which determines certain details in its stat block. The creature disappears when it drops to 0 {@variantrule Hit Points|XPHB} or when the spell ends.",
 				"The creature is an ally to you and your allies. In combat, the creature shares your {@variantrule Initiative|XPHB} count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge|XPHB} action and uses its movement to avoid danger."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -18344,7 +18343,7 @@
 						"Use the spell slot's level for the spell's level in the stat block."
 					]
 				}
-			],
+			,
 			"miscTags": [
 				"SGT",
 				"SMN"
@@ -18392,7 +18391,7 @@
 				"You call forth a fiendish spirit. It manifests in an unoccupied space that you can see within range and uses the {@creature Fiendish Spirit|XPHB} stat block. When you cast the spell, choose Demon, Devil, or Yugoloth. The creature resembles a Fiend of the chosen type, which determines certain details in its stat block. The creature disappears when it drops to 0 {@variantrule Hit Points|XPHB} or when the spell ends.",
 				"The creature is an ally to you and your allies. In combat, the creature shares your {@variantrule Initiative|XPHB} count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge|XPHB} action and uses its movement to avoid danger."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -18400,7 +18399,7 @@
 						"Use the spell slot's level for the spell's level in the stat block."
 					]
 				}
-			],
+			,
 			"miscTags": [
 				"SGT",
 				"SMN"
@@ -18448,7 +18447,7 @@
 				"You call forth an Undead spirit. It manifests in an unoccupied space that you can see within range and uses the {@creature Undead Spirit|XPHB} stat block. When you cast the spell, choose the creature's form: Ghostly, Putrid, or Skeletal. The spirit resembles an Undead creature with the chosen form, which determines certain details in its stat block. The creature disappears when it drops to 0 {@variantrule Hit Points|XPHB} or when the spell ends.",
 				"The creature is an ally to you and your allies. In combat, the creature shares your {@variantrule Initiative|XPHB} count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge|XPHB} action and uses its movement to avoid danger."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -18456,7 +18455,7 @@
 						"Use the spell slot's level for the spell's level in the stat block."
 					]
 				}
-			],
+			,
 			"miscTags": [
 				"SGT",
 				"SMN"
@@ -18858,7 +18857,7 @@
 				"One creature of your choice that you can see within range makes a Wisdom saving throw. On a failed save, it has the {@condition Prone|XPHB} and {@condition Incapacitated|XPHB} conditions for the duration. During that time, it laughs uncontrollably if it's capable of laughter, and it can't end the {@condition Prone|XPHB} condition on itself.",
 				"At the end of each of its turns and each time it takes damage, it makes another Wisdom saving throw. The target has {@variantrule Advantage|XPHB} on the save if the save is triggered by damage. On a successful save, the spell ends."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -18866,7 +18865,7 @@
 						"You can target one additional creature for each spell slot level about 1."
 					]
 				}
-			],
+			,
 			"conditionInflict": [
 				"incapacitated",
 				"prone"
@@ -19352,7 +19351,7 @@
 			"entries": [
 				"You create a vine-like whip covered in thorns that lashes out at your command toward a creature in range. Make a melee spell attack against the target. On a hit, the target takes {@damage 1d6} Piercing damage, and if it is Large or smaller, you can pull it up to 10 feet closer to you."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Cantrip Upgrade",
@@ -19360,7 +19359,7 @@
 						"The damage increases by {@dice 1d6} when you reach levels 5 ({@damage 2d6}), 11 ({@damage 3d6}), and 17 ({@damage 4d6})."
 					]
 				}
-			],
+			,
 			"scalingLevelDice": {
 				"label": "Piercing damage",
 				"scaling": {
@@ -19414,7 +19413,7 @@
 			"entries": [
 				"Each creature in a 5-foot Emanation originating from you must succeed on a Constitution saving throw or take {@damage 1d6} Thunder damage. The spell's thunderous sound can be heard up to 100 feet away."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Cantrip Upgrade",
@@ -19422,7 +19421,7 @@
 						"The damage increases by {@dice 1d6} when you reach levels 5 ({@damage 2d6}), 11 ({@damage 3d6}), and 17 ({@damage 4d6})."
 					]
 				}
-			],
+			,
 			"scalingLevelDice": {
 				"label": "Thunder damage",
 				"scaling": {
@@ -19475,7 +19474,7 @@
 			"entries": [
 				"Your strike rings with thunder that is audible within 300 feet of you, and the target takes an extra {@damage 2d6} Thunder damage from the attack. Additionally, if the target is a creature, it must succeed on a Strength saving throw or be pushed 10 feet away from you and have the {@condition Prone|XPHB} condition."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -19483,7 +19482,7 @@
 						"The damage increases by {@scaledamage 2d6|1-9|1d6} for each spell slot level above 1."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"thunder"
 			],
@@ -19531,7 +19530,7 @@
 				"You unleash a wave of thunderous energy. Each creature in a 15-foot Cube originating from you makes a Constitution saving throw. On a failed save, a creature takes {@damage 2d8} Thunder damage and is pushed 10 feet away from you. On a successful save, a creature takes half as much damage only.",
 				"In addition, unsecured objects that are entirely within the Cube are pushed 10 feet away from you, and a thunderous boom is audible within 300 feet."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -19539,7 +19538,7 @@
 						"The damage increases by {@scaledamage 2d8|1-9|1d8} for each spell slot level above 1."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"thunder"
 			],
@@ -19617,7 +19616,7 @@
 			"entries": [
 				"You point at one creature you can see within range, and the single chime of a dolorous bell is audible within 10 feet of the target. The target must succeed on a Wisdom saving throw or take {@damage 1d8} Necrotic damage. If the target is missing any of its {@variantrule Hit Points|XPHB}, it instead takes {@damage 1d12} Necrotic damage."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Cantrip Upgrade",
@@ -19625,7 +19624,7 @@
 						"The damage increases by one die when you reach levels 5 ({@damage 2d8} or {@damage 2d12}), 11 ({@damage 3d8} or {@damage 3d12}), and 17 ({@damage 4d8} or {@damage 4d12})."
 					]
 				}
-			],
+			,
 			"scalingLevelDice": [
 				{
 					"label": "necrotic damage",
@@ -19980,7 +19979,7 @@
 			"entries": [
 				"Guided by a flash of magical insight, you make one attack with the weapon used in the spell's casting. The attack uses your spellcasting ability for the attack and damage rolls instead of using Strength or Dexterity. If the attack deals damage, it can be Radiant damage or the weapon's normal damage type (your choice)."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Cantrip Upgrade",
@@ -19988,7 +19987,7 @@
 						"Whether you deal Radiant damage or the weapon's normal damage type, the attack deals extra Radiant damage when you reach levels 5 ({@damage 1d6}), 11 ({@damage 2d6}), and 17 ({@damage 3d6})."
 					]
 				}
-			],
+			,
 			"scalingLevelDice": [
 				{
 					"label": "extra radiant damage",
@@ -20145,7 +20144,7 @@
 				"The touch of your shadow-wreathed hand can siphon life force from others to heal your wounds. Make a melee spell attack against one creature within reach. On a hit, the target takes {@damage 3d6} Necrotic damage, and you regain {@variantrule Hit Points|XPHB} equal to half the amount of Necrotic damage dealt.",
 				"Until the spell ends, you can make the attack again on each of your turns as a {@action Magic|XPHB} action, targeting the same creature or a different one."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -20153,7 +20152,7 @@
 						"The damage increases by {@scaledamage 3d6|3-9|1d6} for each spell slot level above 3."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"necrotic"
 			],
@@ -20198,7 +20197,7 @@
 			"entries": [
 				"You unleash a string of insults laced with subtle enchantments at one creature you can see or hear within range. The target must succeed on a Wisdom saving throw or take {@damage 1d6} Psychic damage and have {@variantrule Disadvantage|XPHB} on the next attack roll it makes before the end of its next turn."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Cantrip Upgrade",
@@ -20206,7 +20205,7 @@
 						"The damage increases by {@dice 1d6} when you reach levels 5 ({@damage 2d6}), 11 ({@damage 3d6}), and 17 ({@damage 4d6})."
 					]
 				}
-			],
+			,
 			"scalingLevelDice": {
 				"label": "psychic damage",
 				"scaling": {
@@ -20263,7 +20262,7 @@
 			"entries": [
 				"You point at a location within range, and a glowing, 1-foot-diameter ball of acid streaks there and explodes in a 20-foot-radius Sphere. Each creature in that area makes a Dexterity saving throw. On a failed save, a creature takes {@damage 10d4} Acid damage and another {@damage 5d4} Acid damage at the end of its next turn. On a successful save, a creature takes half the initial damage only."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -20271,7 +20270,7 @@
 						"The initial damage increases by {@scaledamage 10d4|4-9|2d4} for each spell slot level above 4."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"acid"
 			],
@@ -20323,7 +20322,7 @@
 				"When the wall appears, each creature in its area makes a Dexterity saving throw, taking {@damage 5d8} Fire damage on a failed save or half as much damage on a successful one.",
 				"One side of the wall, selected by you when you cast this spell, deals {@damage 5d8} Fire damage to each creature that ends its turn within 10 feet of that side or inside the wall. A creature takes the same damage when it enters the wall for the first time on a turn or ends its turn there. The other side of the wall deals no damage."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -20331,7 +20330,7 @@
 						"The damage increases by {@scaledamage 5d8|4-9|1d8} for each spell slot level above 4."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"fire"
 			],
@@ -20426,7 +20425,7 @@
 				"The wall is an object that can be damaged and thus breached. It has AC 12 and 30 {@variantrule Hit Points|XPHB} per 10-foot section, and it has {@variantrule Immunity|XPHB} to Cold, Poison, and Psychic damage and {@variantrule Vulnerability|XPHB} to Fire damage. Reducing a 10-foot section of wall to 0 {@variantrule Hit Points|XPHB} destroys it and leaves behind a sheet of frigid air in the space the wall occupied.",
 				"A creature moving through the sheet of frigid air for the first time on a turn makes a Constitution saving throw, taking {@damage 5d6} Cold damage on a failed save or half as much damage on a successful one."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -20434,7 +20433,7 @@
 						"The damage the wall deals when it appears increases by {@scaledamage 10d6|6-9|2d6} and the damage from passing through the sheet of frigid air increases by {@scaledamage 5d6|6-9|1d6} for each spell slot level above 6."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"cold"
 			],
@@ -20540,7 +20539,7 @@
 				"When the wall appears, each creature in its area makes a Dexterity saving throw, taking {@damage 7d8} Piercing damage on a failed save or half as much damage on a successful one.",
 				"A creature can move through the wall, albeit slowly and painfully. For every 1 foot a creature moves through the wall, it must spend 4 feet of movement. Furthermore, the first time a creature enters a space in the wall on a turn or ends its turn there, the creature makes a Dexterity saving throw, taking {@damage 7d8} Slashing damage on a failed save or half as much damage on a successful one. A creature makes this save only once per turn."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -20548,7 +20547,7 @@
 						"Both types of damage increase by {@scaledamage 7d8|6-9|1d8} for each spell slot level above 6."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"piercing",
 				"slashing"
@@ -21057,7 +21056,7 @@
 				"On each of your subsequent turns, you can take a {@variantrule Bonus Action|XPHB} to deal {@damage 1d12} Lightning damage to the target automatically, even if the first attack missed.",
 				"The spell ends if the target is ever outside the spell's range or if it has Total {@variantrule Cover|XPHB} from you."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -21065,7 +21064,7 @@
 						"The initial damage increases by {@scaledamage 2d12|1-9|1d12} for each spell slot level above 1."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"lightning"
 			],
@@ -21111,7 +21110,7 @@
 			"entries": [
 				"Burning radiance erupts from you in a 5-foot Emanation. Each creature of your choice that you can see in it must succeed on a Constitution saving throw or take {@damage 1d6} Radiant damage."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Cantrip Upgrade",
@@ -21119,7 +21118,7 @@
 						"The damage increases by {@dice 1d6} when you reach levels 5 ({@damage 2d6}), 11 ({@damage 3d6}), and 17 ({@damage 4d6})."
 					]
 				}
-			],
+			,
 			"scalingLevelDice": {
 				"label": "Radiant damage",
 				"scaling": {
@@ -21214,7 +21213,7 @@
 			"entries": [
 				"The target takes an extra {@damage 1d6} Necrotic damage from the attack, and it must succeed on a Wisdom saving throw or have the {@condition Frightened|XPHB} condition until the spell ends. At the end of each of its turns, the {@condition Frightened|XPHB} target repeats the save, ending the spell on itself on a success."
 			],
-			"entriesHigherLevel": [
+			"entriesHigherLevel": 
 				{
 					"type": "entries",
 					"name": "Using a Higher-Level Spell Slot",
@@ -21222,7 +21221,7 @@
 						"The damage increases by {@scaledamage 1d6|1-9|1d6} for each spell slot level above 1."
 					]
 				}
-			],
+			,
 			"damageInflict": [
 				"necrotic"
 			],

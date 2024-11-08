@@ -74,10 +74,42 @@ tbody tr:hover {
 .spell-detail {
   background-color: white;
   border: 1px solid #ccc;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   padding: 1rem;
   margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
 }
+
+.spell-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.spell-header div {
+  flex: 1;
+  min-width: 150px;
+}
+
+.spell-description {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background: #f9f9f9;
+  border-radius: 0.25rem;
+}
+
+.spell-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.spell-footer span {
+  font-weight: 600;
+}
+
 
 .back-button {
   display: inline-flex;
