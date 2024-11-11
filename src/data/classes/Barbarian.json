@@ -8,7 +8,7 @@
       "str": true
     }
   ],
-  "class": [
+  "class": 
     {
       "hd": {
         "number": 1,
@@ -76,173 +76,171 @@
           "weapons": ["martial"]
         }
       },
-      "classTableGroups": [
-        {
-          "colLabels": ["Rages", "Rage Damage", "Weapon Mastery"],
-          "rows": [
-            [
-              "2",
-              {
-                "type": "bonus",
-                "value": 2
-              },
-              "2"
-            ],
-            [
-              "2",
-              {
-                "type": "bonus",
-                "value": 2
-              },
-              "2"
-            ],
-            [
-              "3",
-              {
-                "type": "bonus",
-                "value": 2
-              },
-              "2"
-            ],
-            [
-              "3",
-              {
-                "type": "bonus",
-                "value": 2
-              },
-              "3"
-            ],
-            [
-              "3",
-              {
-                "type": "bonus",
-                "value": 2
-              },
-              "3"
-            ],
-            [
-              "4",
-              {
-                "type": "bonus",
-                "value": 2
-              },
-              "3"
-            ],
-            [
-              "4",
-              {
-                "type": "bonus",
-                "value": 2
-              },
-              "3"
-            ],
-            [
-              "4",
-              {
-                "type": "bonus",
-                "value": 2
-              },
-              "3"
-            ],
-            [
-              "4",
-              {
-                "type": "bonus",
-                "value": 3
-              },
-              "3"
-            ],
-            [
-              "4",
-              {
-                "type": "bonus",
-                "value": 3
-              },
-              "4"
-            ],
-            [
-              "4",
-              {
-                "type": "bonus",
-                "value": 3
-              },
-              "4"
-            ],
-            [
-              "5",
-              {
-                "type": "bonus",
-                "value": 3
-              },
-              "4"
-            ],
-            [
-              "5",
-              {
-                "type": "bonus",
-                "value": 3
-              },
-              "4"
-            ],
-            [
-              "5",
-              {
-                "type": "bonus",
-                "value": 3
-              },
-              "4"
-            ],
-            [
-              "5",
-              {
-                "type": "bonus",
-                "value": 3
-              },
-              "4"
-            ],
-            [
-              "5",
-              {
-                "type": "bonus",
-                "value": 4
-              },
-              "4"
-            ],
-            [
-              "6",
-              {
-                "type": "bonus",
-                "value": 4
-              },
-              "4"
-            ],
-            [
-              "6",
-              {
-                "type": "bonus",
-                "value": 4
-              },
-              "4"
-            ],
-            [
-              "6",
-              {
-                "type": "bonus",
-                "value": 4
-              },
-              "4"
-            ],
-            [
-              "6",
-              {
-                "type": "bonus",
-                "value": 4
-              },
-              "4"
-            ]
+      "classTableGroups": {
+        "colLabels": ["Rages", "Rage Damage", "Weapon Mastery"],
+        "rows": [
+          [
+            "2",
+            {
+              "type": "bonus",
+              "value": 2
+            },
+            "2"
+          ],
+          [
+            "2",
+            {
+              "type": "bonus",
+              "value": 2
+            },
+            "2"
+          ],
+          [
+            "3",
+            {
+              "type": "bonus",
+              "value": 2
+            },
+            "2"
+          ],
+          [
+            "3",
+            {
+              "type": "bonus",
+              "value": 2
+            },
+            "3"
+          ],
+          [
+            "3",
+            {
+              "type": "bonus",
+              "value": 2
+            },
+            "3"
+          ],
+          [
+            "4",
+            {
+              "type": "bonus",
+              "value": 2
+            },
+            "3"
+          ],
+          [
+            "4",
+            {
+              "type": "bonus",
+              "value": 2
+            },
+            "3"
+          ],
+          [
+            "4",
+            {
+              "type": "bonus",
+              "value": 2
+            },
+            "3"
+          ],
+          [
+            "4",
+            {
+              "type": "bonus",
+              "value": 3
+            },
+            "3"
+          ],
+          [
+            "4",
+            {
+              "type": "bonus",
+              "value": 3
+            },
+            "4"
+          ],
+          [
+            "4",
+            {
+              "type": "bonus",
+              "value": 3
+            },
+            "4"
+          ],
+          [
+            "5",
+            {
+              "type": "bonus",
+              "value": 3
+            },
+            "4"
+          ],
+          [
+            "5",
+            {
+              "type": "bonus",
+              "value": 3
+            },
+            "4"
+          ],
+          [
+            "5",
+            {
+              "type": "bonus",
+              "value": 3
+            },
+            "4"
+          ],
+          [
+            "5",
+            {
+              "type": "bonus",
+              "value": 3
+            },
+            "4"
+          ],
+          [
+            "5",
+            {
+              "type": "bonus",
+              "value": 4
+            },
+            "4"
+          ],
+          [
+            "6",
+            {
+              "type": "bonus",
+              "value": 4
+            },
+            "4"
+          ],
+          [
+            "6",
+            {
+              "type": "bonus",
+              "value": 4
+            },
+            "4"
+          ],
+          [
+            "6",
+            {
+              "type": "bonus",
+              "value": 4
+            },
+            "4"
+          ],
+          [
+            "6",
+            {
+              "type": "bonus",
+              "value": 4
+            },
+            "4"
           ]
-        }
-      ],
+        ]
+      },
       "classFeatures": [
         "Rage|Barbarian|XPHB|1",
         "Unarmored Defense|Barbarian|XPHB|1",
@@ -284,7 +282,7 @@
         "Primal Champion|Barbarian|XPHB|20"
       ]
     }
-  ],
+  ,
   "subclass": [
     {
       "name": "Path of the Berserker",
