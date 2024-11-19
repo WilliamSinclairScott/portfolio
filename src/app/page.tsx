@@ -145,71 +145,70 @@ export default function Home() {
               {actualDescription}
             </Text>
           </pre>
-          {iconsVisible && (
+            {iconsVisible && (
             <Flex
               direction="row"
               gap="4"
-              className={`opacity-0 fill-white invisible transition-opacity duration-1000 ease-in-out ${iconsVisible ? 'opacity-100 visible animate-[fadeIn_1s_ease-in-out]' : ''}`}
-
+              className={`transition-opacity duration-1000 ease-in-out ${iconsVisible ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
             >
               <Link
-                href="https://www.linkedin.com/in/william-scott-8521bb197/"
-                rel="noopener noreferrer"
-                style={{
-                  display: "inline-block",
-                  borderRadius: "",
-                }}
+              href="https://www.linkedin.com/in/william-scott-8521bb197/"
+              rel="noopener noreferrer"
+              style={{
+                display: "inline-block",
+                borderRadius: "",
+              }}
               >
-                <IconButton
-                  size={"4"}
-                  style={{ backgroundColor: "white", color: "black" }}
-                >
-                  <LinkedInLogoIcon width={"32"} height={"30"} />
-                </IconButton>
+              <IconButton
+                size={"4"}
+                style={{ backgroundColor: "white", color: "black" }}
+              >
+                <LinkedInLogoIcon width={"32"} height={"30"} />
+              </IconButton>
               </Link>
               <Popover.Root>
-                <Popover.Trigger>
-                  <IconButton
-                    size={"3"}
-                    style={{ backgroundColor: "white", color: "black" }}
+              <Popover.Trigger>
+                <IconButton
+                size={"3"}
+                style={{ backgroundColor: "white", color: "black" }}
+                >
+                <EnvelopeClosedIcon width={"18"} height={"18"} />
+                </IconButton>
+              </Popover.Trigger>
+              <Popover.Content sideOffset={5} align="center">
+                <Flex direction="column" gap="2" className="popover-text">
+                <Text size="2">Phone: +1 (319) 855 3580</Text>
+                <Text size="2">
+                  Email:{" "}
+                  <a
+                  href="mailto:william.sinclair.scott@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   >
-                    <EnvelopeClosedIcon width={"18"} height={"18"} />
-                  </IconButton>
-                </Popover.Trigger>
-                <Popover.Content sideOffset={5} align="center">
-                  <Flex direction="column" gap="2" className="popover-text">
-                    <Text size="2">Phone: +1 (319) 855 3580</Text>
-                    <Text size="2">
-                      Email:{" "}
-                      <a
-                        href="mailto:william.sinclair.scott@gmail.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        william.sinclair.scott@gmail.com
-                      </a>
-                    </Text>
-                  </Flex>
-                </Popover.Content>
+                  william.sinclair.scott@gmail.com
+                  </a>
+                </Text>
+                </Flex>
+              </Popover.Content>
               </Popover.Root>
               <Link
-                href="https://github.com/WilliamSinclairScott"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: "inline-block",
-                  borderRadius: "",
-                }}
+              href="https://github.com/WilliamSinclairScott"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "inline-block",
+                borderRadius: "",
+              }}
               >
-                <IconButton
-                  size={"4"}
-                  style={{ backgroundColor: "white", color: "black" }}
-                >
-                  <GitHubLogoIcon width={"32"} height={"30"} />
-                </IconButton>
+              <IconButton
+                size={"4"}
+                style={{ backgroundColor: "white", color: "black" }}
+              >
+                <GitHubLogoIcon width={"32"} height={"30"} />
+              </IconButton>
               </Link>
             </Flex>
-          )}
+            )}
         </Flex>
         <Flex
           gap="4"
