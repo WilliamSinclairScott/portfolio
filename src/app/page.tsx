@@ -16,7 +16,7 @@ import {
   GearIcon,
   EnvelopeClosedIcon,
 } from "@radix-ui/react-icons";
-import War from "../components/War";
+import War from "./components/War";
 import Image from "next/image";
 import { useState, useEffect, SetStateAction } from "react";
 
