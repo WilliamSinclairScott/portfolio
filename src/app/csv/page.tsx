@@ -57,7 +57,7 @@ const CsvPage: React.FC = () => {
   const calculateAveragePrice = () => {
     if (plainText) {
       const jsonArray = JSON.parse(plainText);
-      const total = jsonArray.reduce((acc: number, obj: any) => acc + parseFloat(obj.price), 0);
+      const total = jsonArray.reduce((acc: number, obj: { price: string }) => acc + parseFloat(obj.price), 0);
       const average = total / jsonArray.length;
       alert(`Average Price: ${average.toFixed(2)}`);
     }
