@@ -7,6 +7,7 @@ import { json2csv } from "json-2-csv";
 const CsvPage: React.FC = () => {
   const [jsonFile, setJsonFile] = useState<File | null>(null);
   const [jsonText, setJsonText] = useState<string>("");
+  const [plainText, setPlainText] = useState<string>("");
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.files) {
@@ -18,6 +19,10 @@ const CsvPage: React.FC = () => {
     setJsonText(event.target.value);
   };
 
+  const handlePlainTextChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setPlainText(event.target.value);
+  };
+
   const handleFileUpload = async () => {
     if (jsonFile) {
       const fileReader = new FileReader();
@@ -26,7 +31,6 @@ const CsvPage: React.FC = () => {
           const jsonContent = JSON.parse(e.target.result as string);
           const arrayContent = jsonContent[Object.keys(jsonContent)[0]];
           const csvContent = await json2csv(arrayContent);
-          console.log(csvContent);
           const blob = new Blob([csvContent], {
             type: "text/csv;charset=utf-8;",
           });
@@ -43,11 +47,19 @@ const CsvPage: React.FC = () => {
       const jsonContent = JSON.parse(jsonText);
       const arrayContent = jsonContent[Object.keys(jsonContent)[0]];
       const csvContent = await json2csv(arrayContent);
-      console.log(csvContent);
       const blob = new Blob([csvContent], {
         type: "text/csv;charset=utf-8;",
       });
       saveAs(blob, "converted.csv");
+    }
+  };
+
+  const calculateAveragePrice = () => {
+    if (plainText) {
+      const jsonArray = JSON.parse(plainText);
+      const total = jsonArray.reduce((acc: number, obj: any) => acc + parseFloat(obj.price), 0);
+      const average = total / jsonArray.length;
+      alert(`Average Price: ${average.toFixed(2)}`);
     }
   };
 
@@ -98,9 +110,22 @@ const CsvPage: React.FC = () => {
       <button
         onClick={handleTextConvert}
         disabled={!jsonText}
-        className="px-4 py-2 bg-blue-500 text-white rounded disabled:bg-gray-400"
+        className="px-4 py-2 bg-blue-500 text-white rounded disabled:bg-gray-400 mb-4"
       >
         Convert to CSV
+      </button>
+      <textarea
+        value={plainText}
+        onChange={handlePlainTextChange}
+        placeholder="Paste plain text JSON array here"
+        className="mb-4 p-2 border border-gray-300 rounded w-full h-40"
+      />
+      <button
+        onClick={calculateAveragePrice}
+        disabled={!plainText}
+        className="px-4 py-2 bg-blue-500 text-white rounded disabled:bg-gray-400"
+      >
+        Calculate Average Price
       </button>
     </div>
   );
