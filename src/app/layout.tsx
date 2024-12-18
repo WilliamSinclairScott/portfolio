@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import {Theme, Container, ThemePanel} from "@radix-ui/themes"
+import {Theme, Container } from "@radix-ui/themes"
 
 import "./globals.css";
 
@@ -16,13 +16,7 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
-const Preloader = () => {
-  return (
-    <div className="fixed top-0 left-0 w-full h-full bg-black flex justify-center items-center z-[9999]">
-      <div className="border-[16px] border-solid border-gray-200 border-t-[16px] border-t-blue-500 rounded-full w-[120px] h-[120px] animate-spin"></div>
-    </div>
-  );
-};
+
 
 export const metadata: Metadata = {
   title: "WSinScott Portfolio",
