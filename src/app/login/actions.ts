@@ -4,10 +4,10 @@ import { z } from "zod";
 import { createSession, deleteSession } from "../lib/session";
 import { redirect } from "next/navigation";
 
-const testUser = {
-  id: "1",
-  email: "contact@cosdensolutions.io",
-  password: "12345678",
+const whitelistedUser = {
+  id: "family",
+  emails: process.env.FAMILY_WHITELIST,
+  password: process.env.FAMILY_PASSWORD,
 };
 
 const loginSchema = z.object({
@@ -29,7 +29,7 @@ export async function login(prevState: unknown, formData: FormData) {
 
   const { email, password } = result.data;
 
-  if (email !== testUser.email || password !== testUser.password) {
+  if (whitelistedUser.emails?.split(",").includes(email) || password !== whitelistedUser.password) {
     return {
       errors: {
         email: ["Invalid email or password"],
@@ -37,11 +37,13 @@ export async function login(prevState: unknown, formData: FormData) {
     };
   }
 
-  await createSession(testUser.id);
+  await createSession(whitelistedUser.id);
 
   redirect("/family");
 }
 
+
+//TODO: redundant code, need to bring actions out and classify them correctly
 export async function logout() {
   await deleteSession();
   redirect("/login");
