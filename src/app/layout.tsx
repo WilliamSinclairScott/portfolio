@@ -31,11 +31,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black m-0`}
       >
-      <Theme >
-        <Container>
-          {children}
+      <Theme>
+        <Container className="p-0 bg-black -z-10">
+        {children}
         </Container>
         {/* <ThemePanel /> */}
       </Theme>
