@@ -71,12 +71,53 @@ export async function fetchFiles(path: string = ""): Promise<{ name: string; url
   }
 }
 
-export async function handleUpload(path: string, contents: string | Buffer) {
-  const dbx = new Dropbox({ accessToken: process.env.DROPBOX_ACCESS_TOKEN! });
-  console.log("Service Created");
-  const response = await dbx.filesUpload({ path, contents });
-  return response.result;
+export async function handleUpload(path: string, fileList: FileList): Promise<unknown[]> {
+  const accessToken = process.env.DROPBOX_ACCESS_TOKEN;
+
+  if (!accessToken) {
+    throw new Error("DROPBOX_ACCESS_TOKEN is not defined in environment variables");
+  }
+
+  if (!fileList || fileList.length === 0) {
+    throw new Error("No files provided for upload");
+  }
+
+  const dbx = new Dropbox({
+    accessToken,
+    fetch,
+  });
+
+  console.log("Service Created, Uploading files to Dropbox");
+
+  // Array to store upload results
+  const uploadResults = [];
+
+  // Loop through each file in the FileList
+  for (const file of Array.from(fileList)) {
+    const filePath = `${path}/${file.name}`;
+
+    try {
+      // Read file as ArrayBuffer
+      const fileContents = await file.arrayBuffer();
+
+      // Upload file
+      const response = await dbx.filesUpload({
+        path: filePath,
+        contents: fileContents,
+        mode: { '.tag': 'overwrite' }, // Overwrite if file already exists
+      });
+
+      console.log(`File uploaded: ${file.name}`);
+      uploadResults.push(response.result);
+    } catch (error) {
+      console.error(`Error uploading file ${file.name}:`, error);
+      uploadResults.push({ file: file.name, error: error });
+    }
+  }
+
+  return uploadResults;
 }
+
 
 //TODO: redundant code, need to bring actions out and classify them correctly
 export async function logout() {
