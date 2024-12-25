@@ -31,6 +31,6 @@ body main {
   left: 0;
   width: 100%;
   min-height: 100vh;
-  z-index: -1; /* Behind all content */
+  z-index: 0; /* Behind all content */
   background-color: #ffffff; /* White background */
 }
