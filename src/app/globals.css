@@ -34,3 +34,10 @@ body main {
   z-index: 0; /* Behind all content */
   background-color: #ffffff; /* White background */
 }
+
+#skill-tree-canvas {
+  border: white 1px solid;
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
+}
